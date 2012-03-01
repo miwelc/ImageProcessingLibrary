@@ -1,0 +1,188 @@
+\hypertarget{imagenES_8cpp}{
+\section{Referencia del Archivo src/imagenES.cpp}
+\label{imagenES_8cpp}\index{src/imagenES.cpp@{src/imagenES.cpp}}
+}
+Fichero con definiciones para la E/S de imágenes. 
+
+{\tt \#include $<$fstream$>$}\par
+{\tt \#include $<$string$>$}\par
+{\tt \#include \char`\"{}imagenES.h\char`\"{}}\par
+
+
+Dependencia gráfica adjunta para imagenES.cpp:\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+\hyperlink{imagenES_8h_8914f6544a484741b05c092d9e7522ed}{TipoImagen} \hyperlink{imagenES_8cpp_16834dd3756f7baf1e5ef710ad7b0e3b}{LeerTipo} (ifstream \&f)
+\item 
+\hyperlink{imagenES_8h_8914f6544a484741b05c092d9e7522ed}{TipoImagen} \hyperlink{imagenES_8cpp_caa5fb277940aceed29f86c093a3d89c}{LeerTipoImagen} (const char $\ast$nombre)
+\begin{CompactList}\small\item\em Devuelve el tipo de imagen del archivo. \item\end{CompactList}\item 
+char \hyperlink{imagenES_8cpp_b090ad072f47dc1ffcfcb900c3334936}{SaltarSeparadores} (ifstream \&f)
+\item 
+bool \hyperlink{imagenES_8cpp_0e193b2477b18f021255d69362992859}{LeerCabecera} (ifstream \&f, int \&fils, int \&cols)
+\item 
+unsigned char $\ast$ \hyperlink{imagenES_8cpp_05aea20533de5bbd02789f76aafbb99b}{LeerImagenPPM} (const char $\ast$nombre, int \&fils, int \&cols)
+\begin{CompactList}\small\item\em Lee una imagen de tipo PPM. \item\end{CompactList}\item 
+unsigned char $\ast$ \hyperlink{imagenES_8cpp_03340a1e1e4a88385c972bb4af463649}{LeerImagenPGM} (const char $\ast$nombre, int \&fils, int \&cols)
+\begin{CompactList}\small\item\em Lee una imagen de tipo PGM. \item\end{CompactList}\item 
+bool \hyperlink{imagenES_8cpp_e149be8653b9f8c7321ac40577e7518c}{EscribirImagenPPM} (const char $\ast$nombre, const unsigned char $\ast$datos, const int fils, const int cols)
+\begin{CompactList}\small\item\em Escribe una imagen de tipo PPM. \item\end{CompactList}\item 
+bool \hyperlink{imagenES_8cpp_4b649cc272f02649563791d5ed75b557}{EscribirImagenPGM} (const char $\ast$nombre, const unsigned char $\ast$datos, const int fils, const int cols)
+\begin{CompactList}\small\item\em Escribe una imagen de tipo PGM. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Descripción detallada}
+Fichero con definiciones para la E/S de imágenes. 
+
+Permite la E/S de archivos de tipo PGM,PPM 
+
+Definición en el archivo \hyperlink{imagenES_8cpp-source}{imagenES.cpp}.
+
+\subsection{Documentación de las funciones}
+\hypertarget{imagenES_8cpp_4b649cc272f02649563791d5ed75b557}{
+\index{imagenES.cpp@{imagenES.cpp}!EscribirImagenPGM@{EscribirImagenPGM}}
+\index{EscribirImagenPGM@{EscribirImagenPGM}!imagenES.cpp@{imagenES.cpp}}
+\subsubsection[EscribirImagenPGM]{\setlength{\rightskip}{0pt plus 5cm}bool EscribirImagenPGM (const char $\ast$ {\em nombre}, \/  const unsigned char $\ast$ {\em datos}, \/  const int {\em fils}, \/  const int {\em cols})}}
+\label{imagenES_8cpp_4b649cc272f02649563791d5ed75b557}
+
+
+Escribe una imagen de tipo PGM. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em nombre}]archivo a escribir \item[{\em datos}]punteros a los {\em f\/} x {\em c\/} bytes que corresponden a los valores de los píxeles de la imagen de grises. \item[{\em f}]filas de la imagen \item[{\em c}]columnas de la imagen \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]si ha tenido éxito en la escritura. \end{Desc}
+
+
+Definición en la línea 133 del archivo imagenES.cpp.
+
+Referenciado por Imagen::guardarPGM(), y main().\hypertarget{imagenES_8cpp_e149be8653b9f8c7321ac40577e7518c}{
+\index{imagenES.cpp@{imagenES.cpp}!EscribirImagenPPM@{EscribirImagenPPM}}
+\index{EscribirImagenPPM@{EscribirImagenPPM}!imagenES.cpp@{imagenES.cpp}}
+\subsubsection[EscribirImagenPPM]{\setlength{\rightskip}{0pt plus 5cm}bool EscribirImagenPPM (const char $\ast$ {\em nombre}, \/  const unsigned char $\ast$ {\em datos}, \/  const int {\em fils}, \/  const int {\em cols})}}
+\label{imagenES_8cpp_e149be8653b9f8c7321ac40577e7518c}
+
+
+Escribe una imagen de tipo PPM. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em nombre}]archivo a escribir \item[{\em datos}]punteros a los {\em f\/} x {\em c\/} x 3 bytes que corresponden a los valores de los píxeles de la imagen en formato RGB. \item[{\em f}]filas de la imagen \item[{\em c}]columnas de la imagen \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]si ha tenido éxito en la escritura. \end{Desc}
+
+
+Definición en la línea 116 del archivo imagenES.cpp.\hypertarget{imagenES_8cpp_0e193b2477b18f021255d69362992859}{
+\index{imagenES.cpp@{imagenES.cpp}!LeerCabecera@{LeerCabecera}}
+\index{LeerCabecera@{LeerCabecera}!imagenES.cpp@{imagenES.cpp}}
+\subsubsection[LeerCabecera]{\setlength{\rightskip}{0pt plus 5cm}bool LeerCabecera (ifstream \& {\em f}, \/  int \& {\em fils}, \/  int \& {\em cols})}}
+\label{imagenES_8cpp_0e193b2477b18f021255d69362992859}
+
+
+
+
+Definición en la línea 55 del archivo imagenES.cpp.
+
+Hace referencia a SaltarSeparadores().
+
+Referenciado por LeerImagenPGM(), y LeerImagenPPM().\hypertarget{imagenES_8cpp_03340a1e1e4a88385c972bb4af463649}{
+\index{imagenES.cpp@{imagenES.cpp}!LeerImagenPGM@{LeerImagenPGM}}
+\index{LeerImagenPGM@{LeerImagenPGM}!imagenES.cpp@{imagenES.cpp}}
+\subsubsection[LeerImagenPGM]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ LeerImagenPGM (const char $\ast$ {\em nombre}, \/  int \& {\em fils}, \/  int \& {\em cols})}}
+\label{imagenES_8cpp_03340a1e1e4a88385c972bb4af463649}
+
+
+Lee una imagen de tipo PGM. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em nombre}]archivo a leer \item[{\em filas}]Parámetro de salida con las filas de la imagen. \item[{\em columnas}]Parámetro de salida con las columnas de la imagen. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]puntero a una nueva zona de memoria que contiene {\em filas\/} x {\em columnas\/} bytes que corresponden a los grises de todos los píxeles (desde la esquina superior izqda a la inferior drcha). En caso de que no no se pueda leer, se devuelve cero. (0). \end{Desc}
+\begin{Desc}
+\item[Postcondición:]En caso de éxito, el puntero apunta a una zona de memoria reservada en memoria dinámica. Será el usuario el responsable de liberarla. \end{Desc}
+
+
+Definición en la línea 95 del archivo imagenES.cpp.
+
+Hace referencia a IMG\_\-PGM, LeerCabecera(), y LeerTipo().
+
+Referenciado por Imagen::cargarPGM(), y main().\hypertarget{imagenES_8cpp_05aea20533de5bbd02789f76aafbb99b}{
+\index{imagenES.cpp@{imagenES.cpp}!LeerImagenPPM@{LeerImagenPPM}}
+\index{LeerImagenPPM@{LeerImagenPPM}!imagenES.cpp@{imagenES.cpp}}
+\subsubsection[LeerImagenPPM]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ LeerImagenPPM (const char $\ast$ {\em nombre}, \/  int \& {\em fils}, \/  int \& {\em cols})}}
+\label{imagenES_8cpp_05aea20533de5bbd02789f76aafbb99b}
+
+
+Lee una imagen de tipo PPM. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em nombre}]archivo a leer \item[{\em filas}]Parámetro de salida con las filas de la imagen. \item[{\em columnas}]Parámetro de salida con las columnas de la imagen. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]puntero a una nueva zona de memoria que contiene {\em filas\/} x {\em columnas\/} x 3 bytes que corresponden a los colores de todos los píxeles en formato RGB (desde la esquina superior izqda a la inferior drcha). En caso de que no no se pueda leer, se devuelve cero. (0). \end{Desc}
+\begin{Desc}
+\item[Postcondición:]En caso de éxito, el puntero apunta a una zona de memoria reservada en memoria dinámica. Será el usuario el responsable de liberarla. \end{Desc}
+
+
+Definición en la línea 74 del archivo imagenES.cpp.
+
+Hace referencia a IMG\_\-PPM, LeerCabecera(), y LeerTipo().
+
+Referenciado por RGB2Gris().\hypertarget{imagenES_8cpp_16834dd3756f7baf1e5ef710ad7b0e3b}{
+\index{imagenES.cpp@{imagenES.cpp}!LeerTipo@{LeerTipo}}
+\index{LeerTipo@{LeerTipo}!imagenES.cpp@{imagenES.cpp}}
+\subsubsection[LeerTipo]{\setlength{\rightskip}{0pt plus 5cm}{\bf TipoImagen} LeerTipo (ifstream \& {\em f})}}
+\label{imagenES_8cpp_16834dd3756f7baf1e5ef710ad7b0e3b}
+
+
+
+
+Definición en la línea 17 del archivo imagenES.cpp.
+
+Hace referencia a IMG\_\-DESCONOCIDO, IMG\_\-PGM, y IMG\_\-PPM.
+
+Referenciado por LeerImagenPGM(), LeerImagenPPM(), y LeerTipoImagen().\hypertarget{imagenES_8cpp_caa5fb277940aceed29f86c093a3d89c}{
+\index{imagenES.cpp@{imagenES.cpp}!LeerTipoImagen@{LeerTipoImagen}}
+\index{LeerTipoImagen@{LeerTipoImagen}!imagenES.cpp@{imagenES.cpp}}
+\subsubsection[LeerTipoImagen]{\setlength{\rightskip}{0pt plus 5cm}{\bf TipoImagen} LeerTipoImagen (const char $\ast$ {\em nombre})}}
+\label{imagenES_8cpp_caa5fb277940aceed29f86c093a3d89c}
+
+
+Devuelve el tipo de imagen del archivo. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em nombre}]indica el archivo de disco que consultar \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]Devuelve el tipo de la imagen en el archivo\end{Desc}
+\begin{Desc}
+\item[Ver también:]\hyperlink{imagenES_8h_8914f6544a484741b05c092d9e7522ed}{TipoImagen} \end{Desc}
+
+
+Definición en la línea 36 del archivo imagenES.cpp.
+
+Hace referencia a LeerTipo().
+
+Referenciado por Imagen::cargarPGM(), y RGB2Gris().\hypertarget{imagenES_8cpp_b090ad072f47dc1ffcfcb900c3334936}{
+\index{imagenES.cpp@{imagenES.cpp}!SaltarSeparadores@{SaltarSeparadores}}
+\index{SaltarSeparadores@{SaltarSeparadores}!imagenES.cpp@{imagenES.cpp}}
+\subsubsection[SaltarSeparadores]{\setlength{\rightskip}{0pt plus 5cm}char SaltarSeparadores (ifstream \& {\em f})}}
+\label{imagenES_8cpp_b090ad072f47dc1ffcfcb900c3334936}
+
+
+
+
+Definición en la línea 44 del archivo imagenES.cpp.
+
+Referenciado por LeerCabecera().

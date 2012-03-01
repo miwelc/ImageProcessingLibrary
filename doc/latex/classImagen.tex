@@ -1,0 +1,263 @@
+\hypertarget{classImagen}{
+\section{Referencia de la Clase Imagen}
+\label{classImagen}\index{Imagen@{Imagen}}
+}
+Clase que almacena la información de una imagen y se encarga de su gestión.  
+
+
+{\tt \#include $<$Imagen.h$>$}
+
+\subsection*{Métodos públicos}
+\begin{CompactItemize}
+\item 
+\hyperlink{classImagen_b2e649aa7a105155c7bfdb846abf0528}{Imagen} ()
+\begin{CompactList}\small\item\em Constructor por defecto. \item\end{CompactList}\item 
+\hyperlink{classImagen_88a2fe0c7fa0693b40190df137a0725a}{Imagen} (const \hyperlink{classImagen}{Imagen} \&imagen)
+\begin{CompactList}\small\item\em Constructor de copias. \item\end{CompactList}\item 
+\hyperlink{classImagen_36b8bfdc04ed34f7e342e96eb2943181}{Imagen} (int fils, int columnas)
+\begin{CompactList}\small\item\em Crear una imagen en memoria con fils filas y columnas columnas. \item\end{CompactList}\item 
+\hyperlink{classImagen_03dd93c9cf920a9dc0b72f8bd34f2e8a}{$\sim$Imagen} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+\hyperlink{classImagen}{Imagen} \& \hyperlink{classImagen_9cfdf5f496d78247026783b4026458e8}{operator=} (const \hyperlink{classImagen}{Imagen} \&orig)
+\begin{CompactList}\small\item\em Operador de asignación. \item\end{CompactList}\item 
+void \hyperlink{classImagen_726f1bfb93e599bd4ae7d71f7cd1705a}{Reserva} (int fils, int columnas)
+\begin{CompactList}\small\item\em Liberar los recursos ocupados por la imagen y crear una imagen en memoria con fils filas y columnas columnas. \item\end{CompactList}\item 
+bool \hyperlink{classImagen_a3a61f0842e0dc3d0309c42d229478b7}{guardarPGM} (const char $\ast$salida) const 
+\begin{CompactList}\small\item\em Almacena la imagen en un fichero PGM. \item\end{CompactList}\item 
+bool \hyperlink{classImagen_1fcb000bb29513d2fb4b77e3785827f8}{cargarPGM} (const char $\ast$entrada)
+\begin{CompactList}\small\item\em Carga la imagen de un fichero PGM. \item\end{CompactList}\item 
+int \hyperlink{classImagen_56e4e6b003149ea2bc9dfecf09b22d5a}{num\_\-filas} () const 
+\begin{CompactList}\small\item\em Calcular el número de filas de la imagen. \item\end{CompactList}\item 
+int \hyperlink{classImagen_29f1a1d6a8b9afb41036d76e9d64d4eb}{num\_\-columnas} () const 
+\begin{CompactList}\small\item\em Calcular el número de columnas de la imagen. \item\end{CompactList}\item 
+void \hyperlink{classImagen_566a2ba8ed9fbc3d79b77e162e9cc740}{asigna\_\-pixel} (int fil, int col, \hyperlink{Imagen_8h_0c8186d9b9b7880309c27230bbb5e69d}{byte} valor)
+\begin{CompactList}\small\item\em Asignar el valor valor al píxel (fil, col) de la imagen. \item\end{CompactList}\item 
+\hyperlink{Imagen_8h_0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{classImagen_415bc0106229748b010bfc4f90b4f52c}{valor\_\-pixel} (int fil, int col) const 
+\begin{CompactList}\small\item\em Consultar el valor de la casilla (fil, col) de la imagen. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase que almacena la información de una imagen y se encarga de su gestión. 
+
+Definición en la línea 19 del archivo Imagen.h.
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{classImagen_b2e649aa7a105155c7bfdb846abf0528}{
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\subsubsection[Imagen]{\setlength{\rightskip}{0pt plus 5cm}Imagen::Imagen ()}}
+\label{classImagen_b2e649aa7a105155c7bfdb846abf0528}
+
+
+Constructor por defecto. 
+
+
+
+Definición en la línea 15 del archivo Imagen.cpp.
+
+Referenciado por Imagen().\hypertarget{classImagen_88a2fe0c7fa0693b40190df137a0725a}{
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\subsubsection[Imagen]{\setlength{\rightskip}{0pt plus 5cm}Imagen::Imagen (const {\bf Imagen} \& {\em imagen})}}
+\label{classImagen_88a2fe0c7fa0693b40190df137a0725a}
+
+
+Constructor de copias. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em imagen}]\hyperlink{classImagen}{Imagen} a copiar \end{description}
+\end{Desc}
+
+
+Definición en la línea 26 del archivo Imagen.cpp.
+
+Hace referencia a cols, filas, Imagen(), y valor\_\-pixel().\hypertarget{classImagen_36b8bfdc04ed34f7e342e96eb2943181}{
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\subsubsection[Imagen]{\setlength{\rightskip}{0pt plus 5cm}Imagen::Imagen (int {\em fils}, \/  int {\em columnas})}}
+\label{classImagen_36b8bfdc04ed34f7e342e96eb2943181}
+
+
+Crear una imagen en memoria con fils filas y columnas columnas. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fils}]filas a reservar \item[{\em columnas}]columnas a reservar \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondición:]La imagen creada contiene fils filas y columnas columnas \end{Desc}
+
+
+Definición en la línea 40 del archivo Imagen.cpp.\hypertarget{classImagen_03dd93c9cf920a9dc0b72f8bd34f2e8a}{
+\index{Imagen@{Imagen}!$\sim$Imagen@{$\sim$Imagen}}
+\index{$\sim$Imagen@{$\sim$Imagen}!Imagen@{Imagen}}
+\subsubsection[$\sim$Imagen]{\setlength{\rightskip}{0pt plus 5cm}Imagen::$\sim$Imagen ()}}
+\label{classImagen_03dd93c9cf920a9dc0b72f8bd34f2e8a}
+
+
+Destructor. 
+
+
+
+Definición en la línea 50 del archivo Imagen.cpp.
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{classImagen_9cfdf5f496d78247026783b4026458e8}{
+\index{Imagen@{Imagen}!operator=@{operator=}}
+\index{operator=@{operator=}!Imagen@{Imagen}}
+\subsubsection[operator=]{\setlength{\rightskip}{0pt plus 5cm}{\bf Imagen} \& Imagen::operator= (const {\bf Imagen} \& {\em orig})}}
+\label{classImagen_9cfdf5f496d78247026783b4026458e8}
+
+
+Operador de asignación. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em orig}]\hyperlink{classImagen}{Imagen} a copiar \end{description}
+\end{Desc}
+
+
+Definición en la línea 79 del archivo Imagen.cpp.
+
+Hace referencia a cols, filas, Reserva(), y valor\_\-pixel().\hypertarget{classImagen_726f1bfb93e599bd4ae7d71f7cd1705a}{
+\index{Imagen@{Imagen}!Reserva@{Reserva}}
+\index{Reserva@{Reserva}!Imagen@{Imagen}}
+\subsubsection[Reserva]{\setlength{\rightskip}{0pt plus 5cm}void Imagen::Reserva (int {\em fils}, \/  int {\em columnas})}}
+\label{classImagen_726f1bfb93e599bd4ae7d71f7cd1705a}
+
+
+Liberar los recursos ocupados por la imagen y crear una imagen en memoria con fils filas y columnas columnas. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fils}]filas a reservar \item[{\em columnas}]columnas a reservar \end{description}
+\end{Desc}
+
+
+Definición en la línea 62 del archivo Imagen.cpp.
+
+Referenciado por cargarPGM(), crearIcono(), operator=(), y RGB2Gris().\hypertarget{classImagen_a3a61f0842e0dc3d0309c42d229478b7}{
+\index{Imagen@{Imagen}!guardarPGM@{guardarPGM}}
+\index{guardarPGM@{guardarPGM}!Imagen@{Imagen}}
+\subsubsection[guardarPGM]{\setlength{\rightskip}{0pt plus 5cm}bool Imagen::guardarPGM (const char $\ast$ {\em salida}) const}}
+\label{classImagen_a3a61f0842e0dc3d0309c42d229478b7}
+
+
+Almacena la imagen en un fichero PGM. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em salida}]dirección del archivo a crear \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]Si ha tenido éxito en la escritura \end{Desc}
+
+
+Definición en la línea 94 del archivo Imagen.cpp.
+
+Hace referencia a EscribirImagenPGM().
+
+Referenciado por crearIcono(), ecualizar(), mejorarContraste(), morphing(), RGB2Gris(), y umbralizar().\hypertarget{classImagen_1fcb000bb29513d2fb4b77e3785827f8}{
+\index{Imagen@{Imagen}!cargarPGM@{cargarPGM}}
+\index{cargarPGM@{cargarPGM}!Imagen@{Imagen}}
+\subsubsection[cargarPGM]{\setlength{\rightskip}{0pt plus 5cm}bool Imagen::cargarPGM (const char $\ast$ {\em entrada})}}
+\label{classImagen_1fcb000bb29513d2fb4b77e3785827f8}
+
+
+Carga la imagen de un fichero PGM. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em salida}]dirección del archivo a crear \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]Si ha tenido éxito en la carga \end{Desc}
+
+
+Definición en la línea 114 del archivo Imagen.cpp.
+
+Hace referencia a asigna\_\-pixel(), IMG\_\-PGM, LeerImagenPGM(), LeerTipoImagen(), y Reserva().
+
+Referenciado por crearIcono(), ecualizar(), mejorarContraste(), morphing(), y umbralizar().\hypertarget{classImagen_56e4e6b003149ea2bc9dfecf09b22d5a}{
+\index{Imagen@{Imagen}!num\_\-filas@{num\_\-filas}}
+\index{num\_\-filas@{num\_\-filas}!Imagen@{Imagen}}
+\subsubsection[num\_\-filas]{\setlength{\rightskip}{0pt plus 5cm}int Imagen::num\_\-filas () const}}
+\label{classImagen_56e4e6b003149ea2bc9dfecf09b22d5a}
+
+
+Calcular el número de filas de la imagen. 
+
+\begin{Desc}
+\item[Devuelve:]Número de filas de la imagen \end{Desc}
+
+
+Definición en la línea 138 del archivo Imagen.cpp.
+
+Referenciado por calcularUmbral(), crearIcono(), ecualizar(), mejorarContraste(), morphing(), y umbralizar().\hypertarget{classImagen_29f1a1d6a8b9afb41036d76e9d64d4eb}{
+\index{Imagen@{Imagen}!num\_\-columnas@{num\_\-columnas}}
+\index{num\_\-columnas@{num\_\-columnas}!Imagen@{Imagen}}
+\subsubsection[num\_\-columnas]{\setlength{\rightskip}{0pt plus 5cm}int Imagen::num\_\-columnas () const}}
+\label{classImagen_29f1a1d6a8b9afb41036d76e9d64d4eb}
+
+
+Calcular el número de columnas de la imagen. 
+
+\begin{Desc}
+\item[Devuelve:]Número de columnas de la imagen \end{Desc}
+
+
+Definición en la línea 145 del archivo Imagen.cpp.
+
+Referenciado por calcularUmbral(), crearIcono(), ecualizar(), mejorarContraste(), morphing(), y umbralizar().\hypertarget{classImagen_566a2ba8ed9fbc3d79b77e162e9cc740}{
+\index{Imagen@{Imagen}!asigna\_\-pixel@{asigna\_\-pixel}}
+\index{asigna\_\-pixel@{asigna\_\-pixel}!Imagen@{Imagen}}
+\subsubsection[asigna\_\-pixel]{\setlength{\rightskip}{0pt plus 5cm}void Imagen::asigna\_\-pixel (int {\em fil}, \/  int {\em col}, \/  {\bf byte} {\em valor})}}
+\label{classImagen_566a2ba8ed9fbc3d79b77e162e9cc740}
+
+
+Asignar el valor valor al píxel (fil, col) de la imagen. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fil}]fila a modificar \item[{\em col}]columna a modificar \item[{\em valor}]valor a almacenar en (fil, col) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondición:]I(fil,col) == valor \end{Desc}
+
+
+Definición en la línea 155 del archivo Imagen.cpp.
+
+Referenciado por cargarPGM(), crearIcono(), ecualizar(), mejorarContraste(), morphing(), RGB2Gris(), y umbralizar().\hypertarget{classImagen_415bc0106229748b010bfc4f90b4f52c}{
+\index{Imagen@{Imagen}!valor\_\-pixel@{valor\_\-pixel}}
+\index{valor\_\-pixel@{valor\_\-pixel}!Imagen@{Imagen}}
+\subsubsection[valor\_\-pixel]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} Imagen::valor\_\-pixel (int {\em fil}, \/  int {\em col}) const}}
+\label{classImagen_415bc0106229748b010bfc4f90b4f52c}
+
+
+Consultar el valor de la casilla (fil, col) de la imagen. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fil}]fila a consultar \item[{\em col}]columna a consultar \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]Valor en (fil, col) \end{Desc}
+
+
+Definición en la línea 167 del archivo Imagen.cpp.
+
+Referenciado por calcularUmbral(), crearIcono(), ecualizar(), Imagen(), mejorarContraste(), morphing(), operator=(), y umbralizar().
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros:\begin{CompactItemize}
+\item 
+include/\hyperlink{Imagen_8h}{Imagen.h}\item 
+src/\hyperlink{Imagen_8cpp}{Imagen.cpp}\end{CompactItemize}

@@ -1,0 +1,114 @@
+\indexentry{Imagen@{Imagen}|hyperpage}{5}
+\indexentry{Imagen@{Imagen}!Imagen@{Imagen}|hyperpage}{6}
+\indexentry{Imagen@{Imagen}!Imagen@{Imagen}|hyperpage}{6}
+\indexentry{Imagen@{Imagen}!Imagen@{Imagen}|hyperpage}{6}
+\indexentry{Imagen@{Imagen}!Imagen@{Imagen}|hyperpage}{6}
+\indexentry{Imagen@{Imagen}!Imagen@{Imagen}|hyperpage}{6}
+\indexentry{Imagen@{Imagen}!Imagen@{Imagen}|hyperpage}{6}
+\indexentry{Imagen@{Imagen}!$\sim $Imagen@{$\sim $Imagen}|hyperpage}{6}
+\indexentry{$\sim $Imagen@{$\sim $Imagen}!Imagen@{Imagen}|hyperpage}{6}
+\indexentry{Imagen@{Imagen}!operator=@{operator=}|hyperpage}{7}
+\indexentry{operator=@{operator=}!Imagen@{Imagen}|hyperpage}{7}
+\indexentry{Imagen@{Imagen}!Reserva@{Reserva}|hyperpage}{7}
+\indexentry{Reserva@{Reserva}!Imagen@{Imagen}|hyperpage}{7}
+\indexentry{Imagen@{Imagen}!guardarPGM@{guardarPGM}|hyperpage}{7}
+\indexentry{guardarPGM@{guardarPGM}!Imagen@{Imagen}|hyperpage}{7}
+\indexentry{Imagen@{Imagen}!cargarPGM@{cargarPGM}|hyperpage}{7}
+\indexentry{cargarPGM@{cargarPGM}!Imagen@{Imagen}|hyperpage}{7}
+\indexentry{Imagen@{Imagen}!num\_\discretionary {-}{}{}filas@{num\_\discretionary {-}{}{}filas}|hyperpage}{8}
+\indexentry{num\_\discretionary {-}{}{}filas@{num\_\discretionary {-}{}{}filas}!Imagen@{Imagen}|hyperpage}{8}
+\indexentry{Imagen@{Imagen}!num\_\discretionary {-}{}{}columnas@{num\_\discretionary {-}{}{}columnas}|hyperpage}{8}
+\indexentry{num\_\discretionary {-}{}{}columnas@{num\_\discretionary {-}{}{}columnas}!Imagen@{Imagen}|hyperpage}{8}
+\indexentry{Imagen@{Imagen}!asigna\_\discretionary {-}{}{}pixel@{asigna\_\discretionary {-}{}{}pixel}|hyperpage}{8}
+\indexentry{asigna\_\discretionary {-}{}{}pixel@{asigna\_\discretionary {-}{}{}pixel}!Imagen@{Imagen}|hyperpage}{8}
+\indexentry{Imagen@{Imagen}!valor\_\discretionary {-}{}{}pixel@{valor\_\discretionary {-}{}{}pixel}|hyperpage}{9}
+\indexentry{valor\_\discretionary {-}{}{}pixel@{valor\_\discretionary {-}{}{}pixel}!Imagen@{Imagen}|hyperpage}{9}
+\indexentry{include/funciones.h@{include/funciones.h}|hyperpage}{11}
+\indexentry{funciones.h@{funciones.h}!crearIcono@{crearIcono}|hyperpage}{12}
+\indexentry{crearIcono@{crearIcono}!funciones.h@{funciones.h}|hyperpage}{12}
+\indexentry{funciones.h@{funciones.h}!ecualizar@{ecualizar}|hyperpage}{12}
+\indexentry{ecualizar@{ecualizar}!funciones.h@{funciones.h}|hyperpage}{12}
+\indexentry{funciones.h@{funciones.h}!mejorarContraste@{mejorarContraste}|hyperpage}{12}
+\indexentry{mejorarContraste@{mejorarContraste}!funciones.h@{funciones.h}|hyperpage}{12}
+\indexentry{funciones.h@{funciones.h}!morphing@{morphing}|hyperpage}{13}
+\indexentry{morphing@{morphing}!funciones.h@{funciones.h}|hyperpage}{13}
+\indexentry{funciones.h@{funciones.h}!RGB2Gris@{RGB2Gris}|hyperpage}{13}
+\indexentry{RGB2Gris@{RGB2Gris}!funciones.h@{funciones.h}|hyperpage}{13}
+\indexentry{funciones.h@{funciones.h}!umbralizar@{umbralizar}|hyperpage}{14}
+\indexentry{umbralizar@{umbralizar}!funciones.h@{funciones.h}|hyperpage}{14}
+\indexentry{include/Imagen.h@{include/Imagen.h}|hyperpage}{15}
+\indexentry{Imagen.h@{Imagen.h}!byte@{byte}|hyperpage}{15}
+\indexentry{byte@{byte}!Imagen.h@{Imagen.h}|hyperpage}{15}
+\indexentry{include/imagenES.h@{include/imagenES.h}|hyperpage}{16}
+\indexentry{imagenES.h@{imagenES.h}!TipoImagen@{TipoImagen}|hyperpage}{16}
+\indexentry{TipoImagen@{TipoImagen}!imagenES.h@{imagenES.h}|hyperpage}{16}
+\indexentry{IMG\_\-DESCONOCIDO@{IMG\_\-DESCONOCIDO}!imagenES.h@{imagenES.h}|hyperpage}{17}
+\indexentry{imagenES.h@{imagenES.h}!IMG\_\-DESCONOCIDO@{IMG\_\-DESCONOCIDO}|hyperpage}{17}
+\indexentry{IMG\_\-PGM@{IMG\_\-PGM}!imagenES.h@{imagenES.h}|hyperpage}{17}
+\indexentry{imagenES.h@{imagenES.h}!IMG\_\-PGM@{IMG\_\-PGM}|hyperpage}{17}
+\indexentry{IMG\_\-PPM@{IMG\_\-PPM}!imagenES.h@{imagenES.h}|hyperpage}{17}
+\indexentry{imagenES.h@{imagenES.h}!IMG\_\-PPM@{IMG\_\-PPM}|hyperpage}{17}
+\indexentry{imagenES.h@{imagenES.h}!EscribirImagenPGM@{EscribirImagenPGM}|hyperpage}{17}
+\indexentry{EscribirImagenPGM@{EscribirImagenPGM}!imagenES.h@{imagenES.h}|hyperpage}{17}
+\indexentry{imagenES.h@{imagenES.h}!EscribirImagenPPM@{EscribirImagenPPM}|hyperpage}{17}
+\indexentry{EscribirImagenPPM@{EscribirImagenPPM}!imagenES.h@{imagenES.h}|hyperpage}{17}
+\indexentry{imagenES.h@{imagenES.h}!LeerImagenPGM@{LeerImagenPGM}|hyperpage}{17}
+\indexentry{LeerImagenPGM@{LeerImagenPGM}!imagenES.h@{imagenES.h}|hyperpage}{17}
+\indexentry{imagenES.h@{imagenES.h}!LeerImagenPPM@{LeerImagenPPM}|hyperpage}{18}
+\indexentry{LeerImagenPPM@{LeerImagenPPM}!imagenES.h@{imagenES.h}|hyperpage}{18}
+\indexentry{imagenES.h@{imagenES.h}!LeerTipoImagen@{LeerTipoImagen}|hyperpage}{18}
+\indexentry{LeerTipoImagen@{LeerTipoImagen}!imagenES.h@{imagenES.h}|hyperpage}{18}
+\indexentry{src/contraste.cpp@{src/contraste.cpp}|hyperpage}{20}
+\indexentry{contraste.cpp@{contraste.cpp}!main@{main}|hyperpage}{20}
+\indexentry{main@{main}!contraste.cpp@{contraste.cpp}|hyperpage}{20}
+\indexentry{src/crearicono.cpp@{src/crearicono.cpp}|hyperpage}{21}
+\indexentry{crearicono.cpp@{crearicono.cpp}!main@{main}|hyperpage}{21}
+\indexentry{main@{main}!crearicono.cpp@{crearicono.cpp}|hyperpage}{21}
+\indexentry{src/ecualizar.cpp@{src/ecualizar.cpp}|hyperpage}{22}
+\indexentry{ecualizar.cpp@{ecualizar.cpp}!main@{main}|hyperpage}{22}
+\indexentry{main@{main}!ecualizar.cpp@{ecualizar.cpp}|hyperpage}{22}
+\indexentry{src/funciones.cpp@{src/funciones.cpp}|hyperpage}{23}
+\indexentry{funciones.cpp@{funciones.cpp}!calcularUmbral@{calcularUmbral}|hyperpage}{24}
+\indexentry{calcularUmbral@{calcularUmbral}!funciones.cpp@{funciones.cpp}|hyperpage}{24}
+\indexentry{funciones.cpp@{funciones.cpp}!crearIcono@{crearIcono}|hyperpage}{24}
+\indexentry{crearIcono@{crearIcono}!funciones.cpp@{funciones.cpp}|hyperpage}{24}
+\indexentry{funciones.cpp@{funciones.cpp}!ecualizar@{ecualizar}|hyperpage}{24}
+\indexentry{ecualizar@{ecualizar}!funciones.cpp@{funciones.cpp}|hyperpage}{24}
+\indexentry{funciones.cpp@{funciones.cpp}!mejorarContraste@{mejorarContraste}|hyperpage}{25}
+\indexentry{mejorarContraste@{mejorarContraste}!funciones.cpp@{funciones.cpp}|hyperpage}{25}
+\indexentry{funciones.cpp@{funciones.cpp}!morphing@{morphing}|hyperpage}{25}
+\indexentry{morphing@{morphing}!funciones.cpp@{funciones.cpp}|hyperpage}{25}
+\indexentry{funciones.cpp@{funciones.cpp}!RGB2Gris@{RGB2Gris}|hyperpage}{25}
+\indexentry{RGB2Gris@{RGB2Gris}!funciones.cpp@{funciones.cpp}|hyperpage}{25}
+\indexentry{funciones.cpp@{funciones.cpp}!umbralizar@{umbralizar}|hyperpage}{26}
+\indexentry{umbralizar@{umbralizar}!funciones.cpp@{funciones.cpp}|hyperpage}{26}
+\indexentry{src/Imagen.cpp@{src/Imagen.cpp}|hyperpage}{27}
+\indexentry{src/imagenES.cpp@{src/imagenES.cpp}|hyperpage}{28}
+\indexentry{imagenES.cpp@{imagenES.cpp}!EscribirImagenPGM@{EscribirImagenPGM}|hyperpage}{28}
+\indexentry{EscribirImagenPGM@{EscribirImagenPGM}!imagenES.cpp@{imagenES.cpp}|hyperpage}{28}
+\indexentry{imagenES.cpp@{imagenES.cpp}!EscribirImagenPPM@{EscribirImagenPPM}|hyperpage}{29}
+\indexentry{EscribirImagenPPM@{EscribirImagenPPM}!imagenES.cpp@{imagenES.cpp}|hyperpage}{29}
+\indexentry{imagenES.cpp@{imagenES.cpp}!LeerCabecera@{LeerCabecera}|hyperpage}{29}
+\indexentry{LeerCabecera@{LeerCabecera}!imagenES.cpp@{imagenES.cpp}|hyperpage}{29}
+\indexentry{imagenES.cpp@{imagenES.cpp}!LeerImagenPGM@{LeerImagenPGM}|hyperpage}{29}
+\indexentry{LeerImagenPGM@{LeerImagenPGM}!imagenES.cpp@{imagenES.cpp}|hyperpage}{29}
+\indexentry{imagenES.cpp@{imagenES.cpp}!LeerImagenPPM@{LeerImagenPPM}|hyperpage}{30}
+\indexentry{LeerImagenPPM@{LeerImagenPPM}!imagenES.cpp@{imagenES.cpp}|hyperpage}{30}
+\indexentry{imagenES.cpp@{imagenES.cpp}!LeerTipo@{LeerTipo}|hyperpage}{30}
+\indexentry{LeerTipo@{LeerTipo}!imagenES.cpp@{imagenES.cpp}|hyperpage}{30}
+\indexentry{imagenES.cpp@{imagenES.cpp}!LeerTipoImagen@{LeerTipoImagen}|hyperpage}{30}
+\indexentry{LeerTipoImagen@{LeerTipoImagen}!imagenES.cpp@{imagenES.cpp}|hyperpage}{30}
+\indexentry{imagenES.cpp@{imagenES.cpp}!SaltarSeparadores@{SaltarSeparadores}|hyperpage}{31}
+\indexentry{SaltarSeparadores@{SaltarSeparadores}!imagenES.cpp@{imagenES.cpp}|hyperpage}{31}
+\indexentry{src/morphing.cpp@{src/morphing.cpp}|hyperpage}{32}
+\indexentry{morphing.cpp@{morphing.cpp}!main@{main}|hyperpage}{32}
+\indexentry{main@{main}!morphing.cpp@{morphing.cpp}|hyperpage}{32}
+\indexentry{src/negativo.cpp@{src/negativo.cpp}|hyperpage}{33}
+\indexentry{negativo.cpp@{negativo.cpp}!main@{main}|hyperpage}{33}
+\indexentry{main@{main}!negativo.cpp@{negativo.cpp}|hyperpage}{33}
+\indexentry{src/rgb2gris.cpp@{src/rgb2gris.cpp}|hyperpage}{34}
+\indexentry{rgb2gris.cpp@{rgb2gris.cpp}!main@{main}|hyperpage}{34}
+\indexentry{main@{main}!rgb2gris.cpp@{rgb2gris.cpp}|hyperpage}{34}
+\indexentry{src/umbralizar.cpp@{src/umbralizar.cpp}|hyperpage}{35}
+\indexentry{umbralizar.cpp@{umbralizar.cpp}!main@{main}|hyperpage}{35}
+\indexentry{main@{main}!umbralizar.cpp@{umbralizar.cpp}|hyperpage}{35}

@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>ClaseImagenyFunciones: Referencia del Archivo src/imagenES.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia del Archivo src/imagenES.cpp</h1>Fichero con definiciones para la E/S de imágenes. <a href="#_details">Más...</a>
+<p>
+<code>#include &lt;fstream&gt;</code><br>
+<code>#include &lt;string&gt;</code><br>
+<code>#include &quot;<a class="el" href="imagenES_8h-source.html">imagenES.h</a>&quot;</code><br>
+
+<p>
+<div class="dynheader">
+Dependencia gráfica adjunta para imagenES.cpp:</div>
+<div class="dynsection">
+<p><center><img src="imagenES_8cpp__incl.png" border="0" usemap="#src/imagenES.cpp_map" alt=""></center>
+</div>
+
+<p>
+<a href="imagenES_8cpp-source.html">Ir al código fuente de este archivo.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed">TipoImagen</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#16834dd3756f7baf1e5ef710ad7b0e3b">LeerTipo</a> (ifstream &amp;f)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed">TipoImagen</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#caa5fb277940aceed29f86c093a3d89c">LeerTipoImagen</a> (const char *nombre)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve el tipo de imagen del archivo.  <a href="#caa5fb277940aceed29f86c093a3d89c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#b090ad072f47dc1ffcfcb900c3334936">SaltarSeparadores</a> (ifstream &amp;f)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#0e193b2477b18f021255d69362992859">LeerCabecera</a> (ifstream &amp;f, int &amp;fils, int &amp;cols)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">unsigned char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#05aea20533de5bbd02789f76aafbb99b">LeerImagenPPM</a> (const char *nombre, int &amp;fils, int &amp;cols)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lee una imagen de tipo PPM.  <a href="#05aea20533de5bbd02789f76aafbb99b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">unsigned char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#03340a1e1e4a88385c972bb4af463649">LeerImagenPGM</a> (const char *nombre, int &amp;fils, int &amp;cols)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lee una imagen de tipo PGM.  <a href="#03340a1e1e4a88385c972bb4af463649"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#e149be8653b9f8c7321ac40577e7518c">EscribirImagenPPM</a> (const char *nombre, const unsigned char *datos, const int fils, const int cols)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Escribe una imagen de tipo PPM.  <a href="#e149be8653b9f8c7321ac40577e7518c"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#4b649cc272f02649563791d5ed75b557">EscribirImagenPGM</a> (const char *nombre, const unsigned char *datos, const int fils, const int cols)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Escribe una imagen de tipo PGM.  <a href="#4b649cc272f02649563791d5ed75b557"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Descripción detallada</h2>
+Fichero con definiciones para la E/S de imágenes. 
+<p>
+Permite la E/S de archivos de tipo PGM,PPM 
+<p>Definición en el archivo <a class="el" href="imagenES_8cpp-source.html">imagenES.cpp</a>.</p>
+<hr><h2>Documentación de las funciones</h2>
+<a class="anchor" name="4b649cc272f02649563791d5ed75b557"></a><!-- doxytag: member="imagenES.cpp::EscribirImagenPGM" ref="4b649cc272f02649563791d5ed75b557" args="(const char *nombre, const unsigned char *datos, const int fils, const int cols)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EscribirImagenPGM           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&nbsp;</td>
+          <td class="paramname"> <em>datos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&nbsp;</td>
+          <td class="paramname"> <em>fils</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&nbsp;</td>
+          <td class="paramname"> <em>cols</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Escribe una imagen de tipo PGM. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>archivo a escribir </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>datos</em>&nbsp;</td><td>punteros a los <em>f</em> x <em>c</em> bytes que corresponden a los valores de los píxeles de la imagen de grises. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>f</em>&nbsp;</td><td>filas de la imagen </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>columnas de la imagen </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>si ha tenido éxito en la escritura. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="imagenES_8cpp-source.html#l00133">133</a> del archivo <a class="el" href="imagenES_8cpp-source.html">imagenES.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="Imagen_8cpp-source.html#l00094">Imagen::guardarPGM()</a>, y <a class="el" href="negativo_8cpp-source.html#l00022">main()</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="e149be8653b9f8c7321ac40577e7518c"></a><!-- doxytag: member="imagenES.cpp::EscribirImagenPPM" ref="e149be8653b9f8c7321ac40577e7518c" args="(const char *nombre, const unsigned char *datos, const int fils, const int cols)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EscribirImagenPPM           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&nbsp;</td>
+          <td class="paramname"> <em>datos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&nbsp;</td>
+          <td class="paramname"> <em>fils</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&nbsp;</td>
+          <td class="paramname"> <em>cols</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Escribe una imagen de tipo PPM. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>archivo a escribir </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>datos</em>&nbsp;</td><td>punteros a los <em>f</em> x <em>c</em> x 3 bytes que corresponden a los valores de los píxeles de la imagen en formato RGB. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>f</em>&nbsp;</td><td>filas de la imagen </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>columnas de la imagen </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>si ha tenido éxito en la escritura. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="imagenES_8cpp-source.html#l00116">116</a> del archivo <a class="el" href="imagenES_8cpp-source.html">imagenES.cpp</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="0e193b2477b18f021255d69362992859"></a><!-- doxytag: member="imagenES.cpp::LeerCabecera" ref="0e193b2477b18f021255d69362992859" args="(ifstream &amp;f, int &amp;fils, int &amp;cols)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LeerCabecera           </td>
+          <td>(</td>
+          <td class="paramtype">ifstream &amp;&nbsp;</td>
+          <td class="paramname"> <em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&nbsp;</td>
+          <td class="paramname"> <em>fils</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&nbsp;</td>
+          <td class="paramname"> <em>cols</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>Definición en la línea <a class="el" href="imagenES_8cpp-source.html#l00055">55</a> del archivo <a class="el" href="imagenES_8cpp-source.html">imagenES.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="imagenES_8cpp-source.html#l00044">SaltarSeparadores()</a>.</p>
+
+<p>Referenciado por <a class="el" href="imagenES_8cpp-source.html#l00095">LeerImagenPGM()</a>, y <a class="el" href="imagenES_8cpp-source.html#l00074">LeerImagenPPM()</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="03340a1e1e4a88385c972bb4af463649"></a><!-- doxytag: member="imagenES.cpp::LeerImagenPGM" ref="03340a1e1e4a88385c972bb4af463649" args="(const char *nombre, int &amp;fils, int &amp;cols)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char* LeerImagenPGM           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&nbsp;</td>
+          <td class="paramname"> <em>fils</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&nbsp;</td>
+          <td class="paramname"> <em>cols</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Lee una imagen de tipo PGM. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>archivo a leer </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>filas</em>&nbsp;</td><td>Parámetro de salida con las filas de la imagen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>columnas</em>&nbsp;</td><td>Parámetro de salida con las columnas de la imagen. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>puntero a una nueva zona de memoria que contiene <em>filas</em> x <em>columnas</em> bytes que corresponden a los grises de todos los píxeles (desde la esquina superior izqda a la inferior drcha). En caso de que no no se pueda leer, se devuelve cero. (0). </dd></dl>
+<dl class="post" compact><dt><b>Postcondición:</b></dt><dd>En caso de éxito, el puntero apunta a una zona de memoria reservada en memoria dinámica. Será el usuario el responsable de liberarla. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="imagenES_8cpp-source.html#l00095">95</a> del archivo <a class="el" href="imagenES_8cpp-source.html">imagenES.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="imagenES_8h-source.html#l00020">IMG_PGM</a>, <a class="el" href="imagenES_8cpp-source.html#l00055">LeerCabecera()</a>, y <a class="el" href="imagenES_8cpp-source.html#l00017">LeerTipo()</a>.</p>
+
+<p>Referenciado por <a class="el" href="Imagen_8cpp-source.html#l00114">Imagen::cargarPGM()</a>, y <a class="el" href="negativo_8cpp-source.html#l00022">main()</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="05aea20533de5bbd02789f76aafbb99b"></a><!-- doxytag: member="imagenES.cpp::LeerImagenPPM" ref="05aea20533de5bbd02789f76aafbb99b" args="(const char *nombre, int &amp;fils, int &amp;cols)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char* LeerImagenPPM           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&nbsp;</td>
+          <td class="paramname"> <em>fils</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&nbsp;</td>
+          <td class="paramname"> <em>cols</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Lee una imagen de tipo PPM. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>archivo a leer </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>filas</em>&nbsp;</td><td>Parámetro de salida con las filas de la imagen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>columnas</em>&nbsp;</td><td>Parámetro de salida con las columnas de la imagen. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>puntero a una nueva zona de memoria que contiene <em>filas</em> x <em>columnas</em> x 3 bytes que corresponden a los colores de todos los píxeles en formato RGB (desde la esquina superior izqda a la inferior drcha). En caso de que no no se pueda leer, se devuelve cero. (0). </dd></dl>
+<dl class="post" compact><dt><b>Postcondición:</b></dt><dd>En caso de éxito, el puntero apunta a una zona de memoria reservada en memoria dinámica. Será el usuario el responsable de liberarla. </dd></dl>
+
+<p>Definición en la línea <a class="el" href="imagenES_8cpp-source.html#l00074">74</a> del archivo <a class="el" href="imagenES_8cpp-source.html">imagenES.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="imagenES_8h-source.html#l00020">IMG_PPM</a>, <a class="el" href="imagenES_8cpp-source.html#l00055">LeerCabecera()</a>, y <a class="el" href="imagenES_8cpp-source.html#l00017">LeerTipo()</a>.</p>
+
+<p>Referenciado por <a class="el" href="funciones_8cpp-source.html#l00025">RGB2Gris()</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="16834dd3756f7baf1e5ef710ad7b0e3b"></a><!-- doxytag: member="imagenES.cpp::LeerTipo" ref="16834dd3756f7baf1e5ef710ad7b0e3b" args="(ifstream &amp;f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed">TipoImagen</a> LeerTipo           </td>
+          <td>(</td>
+          <td class="paramtype">ifstream &amp;&nbsp;</td>
+          <td class="paramname"> <em>f</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>Definición en la línea <a class="el" href="imagenES_8cpp-source.html#l00017">17</a> del archivo <a class="el" href="imagenES_8cpp-source.html">imagenES.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="imagenES_8h-source.html#l00020">IMG_DESCONOCIDO</a>, <a class="el" href="imagenES_8h-source.html#l00020">IMG_PGM</a>, y <a class="el" href="imagenES_8h-source.html#l00020">IMG_PPM</a>.</p>
+
+<p>Referenciado por <a class="el" href="imagenES_8cpp-source.html#l00095">LeerImagenPGM()</a>, <a class="el" href="imagenES_8cpp-source.html#l00074">LeerImagenPPM()</a>, y <a class="el" href="imagenES_8cpp-source.html#l00036">LeerTipoImagen()</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="caa5fb277940aceed29f86c093a3d89c"></a><!-- doxytag: member="imagenES.cpp::LeerTipoImagen" ref="caa5fb277940aceed29f86c093a3d89c" args="(const char *nombre)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed">TipoImagen</a> LeerTipoImagen           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>nombre</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Devuelve el tipo de imagen del archivo. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>indica el archivo de disco que consultar </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>Devuelve el tipo de la imagen en el archivo</dd></dl>
+<dl class="see" compact><dt><b>Ver también:</b></dt><dd><a class="el" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed" title="Tipo de imagen.">TipoImagen</a> </dd></dl>
+
+<p>Definición en la línea <a class="el" href="imagenES_8cpp-source.html#l00036">36</a> del archivo <a class="el" href="imagenES_8cpp-source.html">imagenES.cpp</a>.</p>
+
+<p>Hace referencia a <a class="el" href="imagenES_8cpp-source.html#l00017">LeerTipo()</a>.</p>
+
+<p>Referenciado por <a class="el" href="Imagen_8cpp-source.html#l00114">Imagen::cargarPGM()</a>, y <a class="el" href="funciones_8cpp-source.html#l00025">RGB2Gris()</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="b090ad072f47dc1ffcfcb900c3334936"></a><!-- doxytag: member="imagenES.cpp::SaltarSeparadores" ref="b090ad072f47dc1ffcfcb900c3334936" args="(ifstream &amp;f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char SaltarSeparadores           </td>
+          <td>(</td>
+          <td class="paramtype">ifstream &amp;&nbsp;</td>
+          <td class="paramname"> <em>f</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>Definición en la línea <a class="el" href="imagenES_8cpp-source.html#l00044">44</a> del archivo <a class="el" href="imagenES_8cpp-source.html">imagenES.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="imagenES_8cpp-source.html#l00055">LeerCabecera()</a>.</p>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Tue Jun 23 17:11:18 2009 para ClaseImagenyFunciones por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.6 </small></address>
+</body>
+</html>

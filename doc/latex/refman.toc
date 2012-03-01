@@ -1,0 +1,97 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}\IeC {\'I}ndice de clases}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Lista de clases}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Indice de archivos}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Lista de archivos}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Documentaci\IeC {\'o}n de las clases}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Referencia de la Clase Imagen}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Descripci\IeC {\'o}n detallada}{6}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Documentaci\IeC {\'o}n del constructor y destructor}{6}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Imagen}{6}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}Imagen}{6}{subsubsection.3.1.2.2}
+\contentsline {subsubsection}{\numberline {3.1.2.3}Imagen}{6}{subsubsection.3.1.2.3}
+\contentsline {subsubsection}{\numberline {3.1.2.4}$\sim $Imagen}{7}{subsubsection.3.1.2.4}
+\contentsline {subsection}{\numberline {3.1.3}Documentaci\IeC {\'o}n de las funciones miembro}{7}{subsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.3.1}operator=}{7}{subsubsection.3.1.3.1}
+\contentsline {subsubsection}{\numberline {3.1.3.2}Reserva}{7}{subsubsection.3.1.3.2}
+\contentsline {subsubsection}{\numberline {3.1.3.3}guardarPGM}{7}{subsubsection.3.1.3.3}
+\contentsline {subsubsection}{\numberline {3.1.3.4}cargarPGM}{8}{subsubsection.3.1.3.4}
+\contentsline {subsubsection}{\numberline {3.1.3.5}num\_\discretionary {-}{}{}filas}{8}{subsubsection.3.1.3.5}
+\contentsline {subsubsection}{\numberline {3.1.3.6}num\_\discretionary {-}{}{}columnas}{8}{subsubsection.3.1.3.6}
+\contentsline {subsubsection}{\numberline {3.1.3.7}asigna\_\discretionary {-}{}{}pixel}{8}{subsubsection.3.1.3.7}
+\contentsline {subsubsection}{\numberline {3.1.3.8}valor\_\discretionary {-}{}{}pixel}{9}{subsubsection.3.1.3.8}
+\contentsline {chapter}{\numberline {4}Documentaci\IeC {\'o}n de archivos}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Referencia del Archivo include/funciones.h}{11}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Descripci\IeC {\'o}n detallada}{11}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Documentaci\IeC {\'o}n de las funciones}{12}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}crearIcono}{12}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}ecualizar}{12}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2.3}mejorarContraste}{13}{subsubsection.4.1.2.3}
+\contentsline {subsubsection}{\numberline {4.1.2.4}morphing}{13}{subsubsection.4.1.2.4}
+\contentsline {subsubsection}{\numberline {4.1.2.5}RGB2Gris}{13}{subsubsection.4.1.2.5}
+\contentsline {subsubsection}{\numberline {4.1.2.6}umbralizar}{14}{subsubsection.4.1.2.6}
+\contentsline {section}{\numberline {4.2}Referencia del Archivo include/Imagen.h}{15}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Descripci\IeC {\'o}n detallada}{15}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Documentaci\IeC {\'o}n de los tipos definidos}{15}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}byte}{15}{subsubsection.4.2.2.1}
+\contentsline {section}{\numberline {4.3}Referencia del Archivo include/imagenES.h}{16}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Descripci\IeC {\'o}n detallada}{16}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Documentaci\IeC {\'o}n de las enumeraciones}{16}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}TipoImagen}{16}{subsubsection.4.3.2.1}
+\contentsline {subsection}{\numberline {4.3.3}Documentaci\IeC {\'o}n de las funciones}{17}{subsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.1}EscribirImagenPGM}{17}{subsubsection.4.3.3.1}
+\contentsline {subsubsection}{\numberline {4.3.3.2}EscribirImagenPPM}{17}{subsubsection.4.3.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3.3}LeerImagenPGM}{18}{subsubsection.4.3.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.4}LeerImagenPPM}{18}{subsubsection.4.3.3.4}
+\contentsline {subsubsection}{\numberline {4.3.3.5}LeerTipoImagen}{19}{subsubsection.4.3.3.5}
+\contentsline {section}{\numberline {4.4}Referencia del Archivo src/contraste.cpp}{20}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Descripci\IeC {\'o}n detallada}{20}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Documentaci\IeC {\'o}n de las funciones}{20}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}main}{20}{subsubsection.4.4.2.1}
+\contentsline {section}{\numberline {4.5}Referencia del Archivo src/crearicono.cpp}{21}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Descripci\IeC {\'o}n detallada}{21}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Documentaci\IeC {\'o}n de las funciones}{21}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}main}{21}{subsubsection.4.5.2.1}
+\contentsline {section}{\numberline {4.6}Referencia del Archivo src/ecualizar.cpp}{22}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Descripci\IeC {\'o}n detallada}{22}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Documentaci\IeC {\'o}n de las funciones}{22}{subsection.4.6.2}
+\contentsline {subsubsection}{\numberline {4.6.2.1}main}{22}{subsubsection.4.6.2.1}
+\contentsline {section}{\numberline {4.7}Referencia del Archivo src/funciones.cpp}{23}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Descripci\IeC {\'o}n detallada}{23}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Documentaci\IeC {\'o}n de las funciones}{24}{subsection.4.7.2}
+\contentsline {subsubsection}{\numberline {4.7.2.1}calcularUmbral}{24}{subsubsection.4.7.2.1}
+\contentsline {subsubsection}{\numberline {4.7.2.2}crearIcono}{24}{subsubsection.4.7.2.2}
+\contentsline {subsubsection}{\numberline {4.7.2.3}ecualizar}{24}{subsubsection.4.7.2.3}
+\contentsline {subsubsection}{\numberline {4.7.2.4}mejorarContraste}{25}{subsubsection.4.7.2.4}
+\contentsline {subsubsection}{\numberline {4.7.2.5}morphing}{25}{subsubsection.4.7.2.5}
+\contentsline {subsubsection}{\numberline {4.7.2.6}RGB2Gris}{25}{subsubsection.4.7.2.6}
+\contentsline {subsubsection}{\numberline {4.7.2.7}umbralizar}{26}{subsubsection.4.7.2.7}
+\contentsline {section}{\numberline {4.8}Referencia del Archivo src/Imagen.cpp}{27}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Descripci\IeC {\'o}n detallada}{27}{subsection.4.8.1}
+\contentsline {section}{\numberline {4.9}Referencia del Archivo src/imagenES.cpp}{28}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Descripci\IeC {\'o}n detallada}{28}{subsection.4.9.1}
+\contentsline {subsection}{\numberline {4.9.2}Documentaci\IeC {\'o}n de las funciones}{28}{subsection.4.9.2}
+\contentsline {subsubsection}{\numberline {4.9.2.1}EscribirImagenPGM}{28}{subsubsection.4.9.2.1}
+\contentsline {subsubsection}{\numberline {4.9.2.2}EscribirImagenPPM}{29}{subsubsection.4.9.2.2}
+\contentsline {subsubsection}{\numberline {4.9.2.3}LeerCabecera}{29}{subsubsection.4.9.2.3}
+\contentsline {subsubsection}{\numberline {4.9.2.4}LeerImagenPGM}{29}{subsubsection.4.9.2.4}
+\contentsline {subsubsection}{\numberline {4.9.2.5}LeerImagenPPM}{30}{subsubsection.4.9.2.5}
+\contentsline {subsubsection}{\numberline {4.9.2.6}LeerTipo}{30}{subsubsection.4.9.2.6}
+\contentsline {subsubsection}{\numberline {4.9.2.7}LeerTipoImagen}{30}{subsubsection.4.9.2.7}
+\contentsline {subsubsection}{\numberline {4.9.2.8}SaltarSeparadores}{31}{subsubsection.4.9.2.8}
+\contentsline {section}{\numberline {4.10}Referencia del Archivo src/morphing.cpp}{32}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Descripci\IeC {\'o}n detallada}{32}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}Documentaci\IeC {\'o}n de las funciones}{32}{subsection.4.10.2}
+\contentsline {subsubsection}{\numberline {4.10.2.1}main}{32}{subsubsection.4.10.2.1}
+\contentsline {section}{\numberline {4.11}Referencia del Archivo src/negativo.cpp}{33}{section.4.11}
+\contentsline {subsection}{\numberline {4.11.1}Descripci\IeC {\'o}n detallada}{33}{subsection.4.11.1}
+\contentsline {subsection}{\numberline {4.11.2}Documentaci\IeC {\'o}n de las funciones}{33}{subsection.4.11.2}
+\contentsline {subsubsection}{\numberline {4.11.2.1}main}{33}{subsubsection.4.11.2.1}
+\contentsline {section}{\numberline {4.12}Referencia del Archivo src/rgb2gris.cpp}{34}{section.4.12}
+\contentsline {subsection}{\numberline {4.12.1}Descripci\IeC {\'o}n detallada}{34}{subsection.4.12.1}
+\contentsline {subsection}{\numberline {4.12.2}Documentaci\IeC {\'o}n de las funciones}{34}{subsection.4.12.2}
+\contentsline {subsubsection}{\numberline {4.12.2.1}main}{34}{subsubsection.4.12.2.1}
+\contentsline {section}{\numberline {4.13}Referencia del Archivo src/umbralizar.cpp}{35}{section.4.13}
+\contentsline {subsection}{\numberline {4.13.1}Descripci\IeC {\'o}n detallada}{35}{subsection.4.13.1}
+\contentsline {subsection}{\numberline {4.13.2}Documentaci\IeC {\'o}n de las funciones}{35}{subsection.4.13.2}
+\contentsline {subsubsection}{\numberline {4.13.2.1}main}{35}{subsubsection.4.13.2.1}

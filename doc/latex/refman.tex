@@ -1,0 +1,71 @@
+\documentclass[a4paper]{book}
+\usepackage{a4wide}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{times}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{doxygen}
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large ClaseImagenyFunciones \\[1ex]\large 1.0 }\\
+\vspace*{1cm}
+{\large Generado por Doxygen 1.5.6}\\
+\vspace*{0.5cm}
+{\small Tue Jun 23 17:11:18 2009}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\chapter{Índice de clases}
+\input{annotated}
+\chapter{Indice de archivos}
+\input{files}
+\chapter{Documentación de las clases}
+\input{classImagen}
+\chapter{Documentación de archivos}
+\input{funciones_8h}
+\include{Imagen_8h}
+\include{imagenES_8h}
+\include{contraste_8cpp}
+\include{crearicono_8cpp}
+\include{ecualizar_8cpp}
+\include{funciones_8cpp}
+\include{Imagen_8cpp}
+\include{imagenES_8cpp}
+\include{morphing_8cpp}
+\include{negativo_8cpp}
+\include{rgb2gris_8cpp}
+\include{umbralizar_8cpp}
+\printindex
+\end{document}

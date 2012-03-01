@@ -1,0 +1,23 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  Node1 [label="include/Imagen.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid"];
+  Node2 [label="src/contraste.cpp",height=0.2,width=0.4,color="black",URL="$contraste_8cpp.html",tooltip="Fichero de aplicación de la función de mejora de contraste."];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid"];
+  Node3 [label="src/crearicono.cpp",height=0.2,width=0.4,color="black",URL="$crearicono_8cpp.html",tooltip="Fichero de aplicación de la función de reducción de imagen."];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid"];
+  Node4 [label="src/ecualizar.cpp",height=0.2,width=0.4,color="black",URL="$ecualizar_8cpp.html",tooltip="Fichero de aplicación de la función de ecualización automática."];
+  Node1 -> Node5 [dir=back,color="midnightblue",fontsize=10,style="solid"];
+  Node5 [label="src/funciones.cpp",height=0.2,width=0.4,color="black",URL="$funciones_8cpp.html",tooltip="Fichero con definiciones de funciones extra para la modificación de imagenes."];
+  Node1 -> Node6 [dir=back,color="midnightblue",fontsize=10,style="solid"];
+  Node6 [label="src/Imagen.cpp",height=0.2,width=0.4,color="black",URL="$Imagen_8cpp.html",tooltip="Fichero con las definiciones de la clase Imagen asociada a la biblioteca libImagen..."];
+  Node1 -> Node7 [dir=back,color="midnightblue",fontsize=10,style="solid"];
+  Node7 [label="src/morphing.cpp",height=0.2,width=0.4,color="black",URL="$morphing_8cpp.html",tooltip="Fichero de aplicación de la función morphing."];
+  Node1 -> Node8 [dir=back,color="midnightblue",fontsize=10,style="solid"];
+  Node8 [label="src/rgb2gris.cpp",height=0.2,width=0.4,color="black",URL="$rgb2gris_8cpp.html",tooltip="Fichero de aplicación de la función conversión a escala de grises."];
+  Node1 -> Node9 [dir=back,color="midnightblue",fontsize=10,style="solid"];
+  Node9 [label="src/umbralizar.cpp",height=0.2,width=0.4,color="black",URL="$umbralizar_8cpp.html",tooltip="Fichero de aplicación de la función de umbralización automática."];
+}

@@ -1,0 +1,191 @@
+\hypertarget{funciones_8h}{
+\section{Referencia del Archivo include/funciones.h}
+\label{funciones_8h}\index{include/funciones.h@{include/funciones.h}}
+}
+Fichero cabecera de funciones extra para la modificación de imagenes. 
+
+
+
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+void \hyperlink{funciones_8h_07d05e6f2fc29075c5d6e4a80e167d43}{RGB2Gris} (const char $\ast$fich\_\-E, const char $\ast$fich\_\-S)
+\begin{CompactList}\small\item\em Función que convierte una imagen RGB (PPM) a escala de grises (PGM). \item\end{CompactList}\item 
+void \hyperlink{funciones_8h_373014cd670b242dc813db42de6c0fca}{mejorarContraste} (const char $\ast$fich\_\-E, const char $\ast$fich\_\-S, float gamma)
+\begin{CompactList}\small\item\em Función que cambia el contraste de la imagen en función del parámetro gamma. \item\end{CompactList}\item 
+void \hyperlink{funciones_8h_e2d666648802f8708d1f598b5e03f4fa}{ecualizar} (const char $\ast$fich\_\-E, const char $\ast$fich\_\-S)
+\begin{CompactList}\small\item\em Función que realiza un ecualizado automático de la imagen. \item\end{CompactList}\item 
+void \hyperlink{funciones_8h_0b20436889389e16c9d0d2663149751e}{umbralizar} (const char $\ast$fich\_\-E, const char $\ast$fich\_\-S, int \&T)
+\begin{CompactList}\small\item\em Función que realiza un umbralizado automático de la imagen. \item\end{CompactList}\item 
+void \hyperlink{funciones_8h_e20f9a11809d0788cf4553ce131197ad}{crearIcono} (const char $\ast$fich\_\-E, const char $\ast$fich\_\-S, int factor)
+\begin{CompactList}\small\item\em Función que reduce el tamaño de una imagen en un factor \char`\"{}factor\char`\"{}. \item\end{CompactList}\item 
+void \hyperlink{funciones_8h_306ced60827238400994da518b81f031}{morphing} (const char $\ast$fich\_\-E, const char $\ast$fich\_\-S, const char $\ast$prefijo)
+\begin{CompactList}\small\item\em Función que genera una lista de imagenes interpoladas entre dos de referencia. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Descripción detallada}
+Fichero cabecera de funciones extra para la modificación de imagenes. 
+
+\begin{Desc}
+\item[Autor:]Miguel Cantón Cortés\end{Desc}
+Estas funciones sirven de ejemplo de la clase \hyperlink{classImagen}{Imagen} 
+
+Definición en el archivo \hyperlink{funciones_8h-source}{funciones.h}.
+
+\subsection{Documentación de las funciones}
+\hypertarget{funciones_8h_e20f9a11809d0788cf4553ce131197ad}{
+\index{funciones.h@{funciones.h}!crearIcono@{crearIcono}}
+\index{crearIcono@{crearIcono}!funciones.h@{funciones.h}}
+\subsubsection[crearIcono]{\setlength{\rightskip}{0pt plus 5cm}void crearIcono (const char $\ast$ {\em fich\_\-E}, \/  const char $\ast$ {\em fich\_\-S}, \/  int {\em factor})}}
+\label{funciones_8h_e20f9a11809d0788cf4553ce131197ad}
+
+
+Función que reduce el tamaño de una imagen en un factor \char`\"{}factor\char`\"{}. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino \item[{\em factor}]factor de reducción de la imagen\end{description}
+\end{Desc}
+Agrupa la imagen en bloques de factor$\ast$factor píxeles y calcula su media. Esta media se corresponde con cada píxel de la imagen reducida.
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino \item[{\em factor}]factor de reducción de la imagen \end{description}
+\end{Desc}
+
+
+Definición en la línea 173 del archivo funciones.cpp.
+
+Hace referencia a Imagen::asigna\_\-pixel(), Imagen::cargarPGM(), Imagen::guardarPGM(), Imagen::num\_\-columnas(), Imagen::num\_\-filas(), Imagen::Reserva(), y Imagen::valor\_\-pixel().
+
+Referenciado por main().\hypertarget{funciones_8h_e2d666648802f8708d1f598b5e03f4fa}{
+\index{funciones.h@{funciones.h}!ecualizar@{ecualizar}}
+\index{ecualizar@{ecualizar}!funciones.h@{funciones.h}}
+\subsubsection[ecualizar]{\setlength{\rightskip}{0pt plus 5cm}void ecualizar (const char $\ast$ {\em fich\_\-E}, \/  const char $\ast$ {\em fich\_\-S})}}
+\label{funciones_8h_e2d666648802f8708d1f598b5e03f4fa}
+
+
+Función que realiza un ecualizado automático de la imagen. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino\end{description}
+\end{Desc}
+Calculamos el numero de apariciones de cada nivel de gris y lo almacenamo en el vector histograma. Calculamos las probabilidades de cada nivel de gris, dividiendo su número de apariciones entre el total de píxeles, y lo almacenamos en el vector probabilidades. Finalmente usando el vector de probabilidades, y aplicando una fórmula, obtenemos un nuevo vector con los nuevos valores de grises, transformacion
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino \end{description}
+\end{Desc}
+
+
+Definición en la línea 72 del archivo funciones.cpp.
+
+Hace referencia a Imagen::asigna\_\-pixel(), Imagen::cargarPGM(), Imagen::guardarPGM(), Imagen::num\_\-columnas(), Imagen::num\_\-filas(), y Imagen::valor\_\-pixel().
+
+Referenciado por main().\hypertarget{funciones_8h_373014cd670b242dc813db42de6c0fca}{
+\index{funciones.h@{funciones.h}!mejorarContraste@{mejorarContraste}}
+\index{mejorarContraste@{mejorarContraste}!funciones.h@{funciones.h}}
+\subsubsection[mejorarContraste]{\setlength{\rightskip}{0pt plus 5cm}void mejorarContraste (const char $\ast$ {\em fich\_\-E}, \/  const char $\ast$ {\em fich\_\-S}, \/  float {\em gamma})}}
+\label{funciones_8h_373014cd670b242dc813db42de6c0fca}
+
+
+Función que cambia el contraste de la imagen en función del parámetro gamma. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino \item[{\em gamma}]Obtenemos el nuevo valor de cada píxel mediante la transformación f(x) = 255 $\ast$ (x/255)$^\wedge$gamma\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino \item[{\em gamma}]\end{description}
+\end{Desc}
+
+
+Definición en la línea 50 del archivo funciones.cpp.
+
+Hace referencia a Imagen::asigna\_\-pixel(), Imagen::cargarPGM(), Imagen::guardarPGM(), Imagen::num\_\-columnas(), Imagen::num\_\-filas(), y Imagen::valor\_\-pixel().
+
+Referenciado por main().\hypertarget{funciones_8h_306ced60827238400994da518b81f031}{
+\index{funciones.h@{funciones.h}!morphing@{morphing}}
+\index{morphing@{morphing}!funciones.h@{funciones.h}}
+\subsubsection[morphing]{\setlength{\rightskip}{0pt plus 5cm}void morphing (const char $\ast$ {\em fich\_\-E}, \/  const char $\ast$ {\em fich\_\-S}, \/  const char $\ast$ {\em prefijo})}}
+\label{funciones_8h_306ced60827238400994da518b81f031}
+
+
+Función que genera una lista de imagenes interpoladas entre dos de referencia. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen A \item[{\em fich\_\-S}]dirección de la imagen B \item[{\em prefijo}]dirección de las imagenes destino\end{description}
+\end{Desc}
+Va estabilizando una imagen en relación a otra sumándole o restándole en cada ciclo 1 a cada píxel hasta llegar a los mimos niveles de gris de la segunda imagen. En cada ciclo guarda cada imagen intermedia
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen A \item[{\em fich\_\-S}]dirección de la imagen B \item[{\em prefijo}]dirección de las imagenes destino \end{description}
+\end{Desc}
+
+
+Definición en la línea 209 del archivo funciones.cpp.
+
+Hace referencia a Imagen::asigna\_\-pixel(), Imagen::cargarPGM(), Imagen::guardarPGM(), Imagen::num\_\-columnas(), Imagen::num\_\-filas(), y Imagen::valor\_\-pixel().
+
+Referenciado por main().\hypertarget{funciones_8h_07d05e6f2fc29075c5d6e4a80e167d43}{
+\index{funciones.h@{funciones.h}!RGB2Gris@{RGB2Gris}}
+\index{RGB2Gris@{RGB2Gris}!funciones.h@{funciones.h}}
+\subsubsection[RGB2Gris]{\setlength{\rightskip}{0pt plus 5cm}void RGB2Gris (const char $\ast$ {\em fich\_\-E}, \/  const char $\ast$ {\em fich\_\-S})}}
+\label{funciones_8h_07d05e6f2fc29075c5d6e4a80e167d43}
+
+
+Función que convierte una imagen RGB (PPM) a escala de grises (PGM). 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino\end{description}
+\end{Desc}
+Cada 3 bytes de la imagen PPM se corresponden a uno en la PGM, para pasar de uno a otro usamos una sencilla función: f(r,g,b) = 0.2989$\ast$r + 0.587$\ast$g + 0.114$\ast$b
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino \end{description}
+\end{Desc}
+
+
+Definición en la línea 25 del archivo funciones.cpp.
+
+Hace referencia a Imagen::asigna\_\-pixel(), Imagen::guardarPGM(), IMG\_\-PPM, LeerImagenPPM(), LeerTipoImagen(), y Imagen::Reserva().
+
+Referenciado por main().\hypertarget{funciones_8h_0b20436889389e16c9d0d2663149751e}{
+\index{funciones.h@{funciones.h}!umbralizar@{umbralizar}}
+\index{umbralizar@{umbralizar}!funciones.h@{funciones.h}}
+\subsubsection[umbralizar]{\setlength{\rightskip}{0pt plus 5cm}void umbralizar (const char $\ast$ {\em fich\_\-E}, \/  const char $\ast$ {\em fich\_\-S}, \/  int \& {\em T})}}
+\label{funciones_8h_0b20436889389e16c9d0d2663149751e}
+
+
+Función que realiza un umbralizado automático de la imagen. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino\end{description}
+\end{Desc}
+Una vez calculado el umbral T, recorre la imagen, convirtiendo en 255 aquellos píxeles con un gris $>$= que T, y a 0 aquellos con un gris $<$ T
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em fich\_\-E}]dirección de la imagen origen \item[{\em fich\_\-S}]dirección de la imagen destino \end{description}
+\end{Desc}
+
+
+Definición en la línea 143 del archivo funciones.cpp.
+
+Hace referencia a Imagen::asigna\_\-pixel(), calcularUmbral(), Imagen::cargarPGM(), Imagen::guardarPGM(), Imagen::num\_\-columnas(), Imagen::num\_\-filas(), y Imagen::valor\_\-pixel().
+
+Referenciado por main().

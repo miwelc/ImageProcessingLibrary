@@ -1,0 +1,203 @@
+\begin{theindex}
+
+  \item {$\sim $Imagen}
+    \subitem {Imagen}, \hyperpage{6}
+
+  \indexspace
+
+  \item {asigna\_\discretionary {-}{}{}pixel}
+    \subitem {Imagen}, \hyperpage{8}
+
+  \indexspace
+
+  \item {byte}
+    \subitem {Imagen.h}, \hyperpage{15}
+
+  \indexspace
+
+  \item {calcularUmbral}
+    \subitem {funciones.cpp}, \hyperpage{24}
+  \item {cargarPGM}
+    \subitem {Imagen}, \hyperpage{7}
+  \item {contraste.cpp}
+    \subitem {main}, \hyperpage{20}
+  \item {crearIcono}
+    \subitem {funciones.cpp}, \hyperpage{24}
+    \subitem {funciones.h}, \hyperpage{12}
+  \item {crearicono.cpp}
+    \subitem {main}, \hyperpage{21}
+
+  \indexspace
+
+  \item {ecualizar}
+    \subitem {funciones.cpp}, \hyperpage{24}
+    \subitem {funciones.h}, \hyperpage{12}
+  \item {ecualizar.cpp}
+    \subitem {main}, \hyperpage{22}
+  \item {EscribirImagenPGM}
+    \subitem {imagenES.cpp}, \hyperpage{28}
+    \subitem {imagenES.h}, \hyperpage{17}
+  \item {EscribirImagenPPM}
+    \subitem {imagenES.cpp}, \hyperpage{29}
+    \subitem {imagenES.h}, \hyperpage{17}
+
+  \indexspace
+
+  \item {funciones.cpp}
+    \subitem {calcularUmbral}, \hyperpage{24}
+    \subitem {crearIcono}, \hyperpage{24}
+    \subitem {ecualizar}, \hyperpage{24}
+    \subitem {mejorarContraste}, \hyperpage{25}
+    \subitem {morphing}, \hyperpage{25}
+    \subitem {RGB2Gris}, \hyperpage{25}
+    \subitem {umbralizar}, \hyperpage{26}
+  \item {funciones.h}
+    \subitem {crearIcono}, \hyperpage{12}
+    \subitem {ecualizar}, \hyperpage{12}
+    \subitem {mejorarContraste}, \hyperpage{12}
+    \subitem {morphing}, \hyperpage{13}
+    \subitem {RGB2Gris}, \hyperpage{13}
+    \subitem {umbralizar}, \hyperpage{14}
+
+  \indexspace
+
+  \item {guardarPGM}
+    \subitem {Imagen}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Imagen}, \hyperpage{5}
+    \subitem {$\sim $Imagen}, \hyperpage{6}
+    \subitem {asigna\_\discretionary {-}{}{}pixel}, \hyperpage{8}
+    \subitem {cargarPGM}, \hyperpage{7}
+    \subitem {guardarPGM}, \hyperpage{7}
+    \subitem {Imagen}, \hyperpage{6}
+    \subitem {num\_\discretionary {-}{}{}columnas}, \hyperpage{8}
+    \subitem {num\_\discretionary {-}{}{}filas}, \hyperpage{8}
+    \subitem {operator=}, \hyperpage{7}
+    \subitem {Reserva}, \hyperpage{7}
+    \subitem {valor\_\discretionary {-}{}{}pixel}, \hyperpage{9}
+  \item {Imagen.h}
+    \subitem {byte}, \hyperpage{15}
+  \item {imagenES.cpp}
+    \subitem {EscribirImagenPGM}, \hyperpage{28}
+    \subitem {EscribirImagenPPM}, \hyperpage{29}
+    \subitem {LeerCabecera}, \hyperpage{29}
+    \subitem {LeerImagenPGM}, \hyperpage{29}
+    \subitem {LeerImagenPPM}, \hyperpage{30}
+    \subitem {LeerTipo}, \hyperpage{30}
+    \subitem {LeerTipoImagen}, \hyperpage{30}
+    \subitem {SaltarSeparadores}, \hyperpage{31}
+  \item {imagenES.h}
+    \subitem {EscribirImagenPGM}, \hyperpage{17}
+    \subitem {EscribirImagenPPM}, \hyperpage{17}
+    \subitem {IMG\_\-DESCONOCIDO}, \hyperpage{17}
+    \subitem {IMG\_\-PGM}, \hyperpage{17}
+    \subitem {IMG\_\-PPM}, \hyperpage{17}
+    \subitem {LeerImagenPGM}, \hyperpage{17}
+    \subitem {LeerImagenPPM}, \hyperpage{18}
+    \subitem {LeerTipoImagen}, \hyperpage{18}
+    \subitem {TipoImagen}, \hyperpage{16}
+  \item {IMG\_\-DESCONOCIDO}
+    \subitem {imagenES.h}, \hyperpage{17}
+  \item {IMG\_\-PGM}
+    \subitem {imagenES.h}, \hyperpage{17}
+  \item {IMG\_\-PPM}
+    \subitem {imagenES.h}, \hyperpage{17}
+  \item {include/funciones.h}, \hyperpage{11}
+  \item {include/Imagen.h}, \hyperpage{15}
+  \item {include/imagenES.h}, \hyperpage{16}
+
+  \indexspace
+
+  \item {LeerCabecera}
+    \subitem {imagenES.cpp}, \hyperpage{29}
+  \item {LeerImagenPGM}
+    \subitem {imagenES.cpp}, \hyperpage{29}
+    \subitem {imagenES.h}, \hyperpage{17}
+  \item {LeerImagenPPM}
+    \subitem {imagenES.cpp}, \hyperpage{30}
+    \subitem {imagenES.h}, \hyperpage{18}
+  \item {LeerTipo}
+    \subitem {imagenES.cpp}, \hyperpage{30}
+  \item {LeerTipoImagen}
+    \subitem {imagenES.cpp}, \hyperpage{30}
+    \subitem {imagenES.h}, \hyperpage{18}
+
+  \indexspace
+
+  \item {main}
+    \subitem {contraste.cpp}, \hyperpage{20}
+    \subitem {crearicono.cpp}, \hyperpage{21}
+    \subitem {ecualizar.cpp}, \hyperpage{22}
+    \subitem {morphing.cpp}, \hyperpage{32}
+    \subitem {negativo.cpp}, \hyperpage{33}
+    \subitem {rgb2gris.cpp}, \hyperpage{34}
+    \subitem {umbralizar.cpp}, \hyperpage{35}
+  \item {mejorarContraste}
+    \subitem {funciones.cpp}, \hyperpage{25}
+    \subitem {funciones.h}, \hyperpage{12}
+  \item {morphing}
+    \subitem {funciones.cpp}, \hyperpage{25}
+    \subitem {funciones.h}, \hyperpage{13}
+  \item {morphing.cpp}
+    \subitem {main}, \hyperpage{32}
+
+  \indexspace
+
+  \item {negativo.cpp}
+    \subitem {main}, \hyperpage{33}
+  \item {num\_\discretionary {-}{}{}columnas}
+    \subitem {Imagen}, \hyperpage{8}
+  \item {num\_\discretionary {-}{}{}filas}
+    \subitem {Imagen}, \hyperpage{8}
+
+  \indexspace
+
+  \item {operator=}
+    \subitem {Imagen}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Reserva}
+    \subitem {Imagen}, \hyperpage{7}
+  \item {RGB2Gris}
+    \subitem {funciones.cpp}, \hyperpage{25}
+    \subitem {funciones.h}, \hyperpage{13}
+  \item {rgb2gris.cpp}
+    \subitem {main}, \hyperpage{34}
+
+  \indexspace
+
+  \item {SaltarSeparadores}
+    \subitem {imagenES.cpp}, \hyperpage{31}
+  \item {src/contraste.cpp}, \hyperpage{20}
+  \item {src/crearicono.cpp}, \hyperpage{21}
+  \item {src/ecualizar.cpp}, \hyperpage{22}
+  \item {src/funciones.cpp}, \hyperpage{23}
+  \item {src/Imagen.cpp}, \hyperpage{27}
+  \item {src/imagenES.cpp}, \hyperpage{28}
+  \item {src/morphing.cpp}, \hyperpage{32}
+  \item {src/negativo.cpp}, \hyperpage{33}
+  \item {src/rgb2gris.cpp}, \hyperpage{34}
+  \item {src/umbralizar.cpp}, \hyperpage{35}
+
+  \indexspace
+
+  \item {TipoImagen}
+    \subitem {imagenES.h}, \hyperpage{16}
+
+  \indexspace
+
+  \item {umbralizar}
+    \subitem {funciones.cpp}, \hyperpage{26}
+    \subitem {funciones.h}, \hyperpage{14}
+  \item {umbralizar.cpp}
+    \subitem {main}, \hyperpage{35}
+
+  \indexspace
+
+  \item {valor\_\discretionary {-}{}{}pixel}
+    \subitem {Imagen}, \hyperpage{9}
+
+\end{theindex}

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>ClaseImagenyFunciones: Fichero Fuente include/imagenES.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+<h1>include/imagenES.h</h1><a href="imagenES_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00009"></a>00009 <span class="preprocessor">#ifndef _IMAGEN_ES_H_</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#define _IMAGEN_ES_H_</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span>
+<a name="l00020"></a><a class="code" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed">00020</a> <span class="keyword">enum</span> <a class="code" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed" title="Tipo de imagen.">TipoImagen</a> {<a class="code" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed23c8d70e6eadf2d0d0ee1fd3bb293384">IMG_DESCONOCIDO</a>, <a class="code" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed8fbef75c1a0002dd6099c6cc1a43e441">IMG_PGM</a>, <a class="code" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed1269c51434b906a7e507f5b49663bf4f">IMG_PPM</a>};
+<a name="l00021"></a>00021 
+<a name="l00030"></a>00030 <a class="code" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed" title="Tipo de imagen.">TipoImagen</a> <a class="code" href="imagenES_8h.html#caa5fb277940aceed29f86c093a3d89c" title="Devuelve el tipo de imagen del archivo.">LeerTipoImagen</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *nombre);
+<a name="l00031"></a>00031 
+<a name="l00045"></a>00045 <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *<a class="code" href="imagenES_8h.html#05aea20533de5bbd02789f76aafbb99b" title="Lee una imagen de tipo PPM.">LeerImagenPPM</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *nombre, <span class="keywordtype">int</span>&amp; fils, <span class="keywordtype">int</span>&amp; cols);
+<a name="l00046"></a>00046 
+<a name="l00057"></a>00057 <span class="keywordtype">bool</span> <a class="code" href="imagenES_8h.html#e149be8653b9f8c7321ac40577e7518c" title="Escribe una imagen de tipo PPM.">EscribirImagenPPM</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *nombre, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *datos, 
+<a name="l00058"></a>00058                         <span class="keyword">const</span> <span class="keywordtype">int</span> fils, <span class="keyword">const</span> <span class="keywordtype">int</span> cols);
+<a name="l00059"></a>00059 
+<a name="l00073"></a>00073 <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *<a class="code" href="imagenES_8h.html#03340a1e1e4a88385c972bb4af463649" title="Lee una imagen de tipo PGM.">LeerImagenPGM</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *nombre, <span class="keywordtype">int</span>&amp; fils, <span class="keywordtype">int</span>&amp; cols);
+<a name="l00074"></a>00074 
+<a name="l00085"></a>00085 <span class="keywordtype">bool</span> <a class="code" href="imagenES_8h.html#4b649cc272f02649563791d5ed75b557" title="Escribe una imagen de tipo PGM.">EscribirImagenPGM</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *nombre, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *datos, 
+<a name="l00086"></a>00086                         <span class="keyword">const</span> <span class="keywordtype">int</span> fils, <span class="keyword">const</span> <span class="keywordtype">int</span> cols);
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#endif</span>
+<a name="l00089"></a>00089 <span class="preprocessor"></span>
+<a name="l00090"></a>00090 <span class="comment">/* Fin Fichero: imagenES.h */</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Tue Jun 23 17:11:18 2009 para ClaseImagenyFunciones por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.6 </small></address>
+</body>
+</html>

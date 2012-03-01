@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>ClaseImagenyFunciones: Fichero Fuente src/funciones.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.6 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+<h1>src/funciones.cpp</h1><a href="funciones_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="Imagen_8h.html" title="Fichero de cabecera asociado a la biblioteca libImagen.a.">Imagen.h</a>"</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="imagenES_8h.html" title="Fichero cabecera para la E/S de imágenes.">imagenES.h</a>"</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;cmath&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;cassert&gt;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keyword">using namespace </span>std;
+<a name="l00015"></a>00015 
+<a name="l00025"></a><a class="code" href="funciones_8cpp.html#07d05e6f2fc29075c5d6e4a80e167d43">00025</a> <span class="keywordtype">void</span> <a class="code" href="funciones_8h.html#07d05e6f2fc29075c5d6e4a80e167d43" title="Función que convierte una imagen RGB (PPM) a escala de grises (PGM).">RGB2Gris</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fich_E, <span class="keyword">const</span> <span class="keywordtype">char</span>* fich_S) {
+<a name="l00026"></a>00026         <a class="code" href="classImagen.html" title="Clase que almacena la información de una imagen y se encarga de su gestión.">Imagen</a> imagen_S;
+<a name="l00027"></a>00027         <span class="keywordtype">int</span> nf, nc;
+<a name="l00028"></a>00028         <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *imagen_E = 0;
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030         <span class="keywordflow">if</span>(<a class="code" href="imagenES_8h.html#8914f6544a484741b05c092d9e7522ed1269c51434b906a7e507f5b49663bf4f">IMG_PPM</a> == <a class="code" href="imagenES_8h.html#caa5fb277940aceed29f86c093a3d89c" title="Devuelve el tipo de imagen del archivo.">LeerTipoImagen</a>(fich_E)) {
+<a name="l00031"></a>00031                 imagen_E = <a class="code" href="imagenES_8h.html#05aea20533de5bbd02789f76aafbb99b" title="Lee una imagen de tipo PPM.">LeerImagenPPM</a>(fich_E, nf, nc);
+<a name="l00032"></a>00032                 imagen_S.<a class="code" href="classImagen.html#726f1bfb93e599bd4ae7d71f7cd1705a" title="Liberar los recursos ocupados por la imagen y crear una imagen en memoria con fils...">Reserva</a>(nf, nc);
+<a name="l00033"></a>00033                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nf; i++)
+<a name="l00034"></a>00034                         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; nc*3; j += 3)
+<a name="l00035"></a>00035                                 imagen_S.<a class="code" href="classImagen.html#566a2ba8ed9fbc3d79b77e162e9cc740" title="Asignar el valor valor al píxel (fil, col) de la imagen.">asigna_pixel</a>(i, j/3, 0.2989*imagen_E[i*nc*3+j]+0.587*imagen_E[i*nc*3+j+1]+0.114*imagen_E[i*nc*3+j+2]);
+<a name="l00036"></a>00036                 imagen_S.<a class="code" href="classImagen.html#a3a61f0842e0dc3d0309c42d229478b7" title="Almacena la imagen en un fichero PGM.">guardarPGM</a>(fich_S);
+<a name="l00037"></a>00037         }
+<a name="l00038"></a>00038         <span class="keyword">delete</span> [] imagen_E;
+<a name="l00039"></a>00039 }
+<a name="l00040"></a>00040 
+<a name="l00050"></a><a class="code" href="funciones_8cpp.html#373014cd670b242dc813db42de6c0fca">00050</a> <span class="keywordtype">void</span> <a class="code" href="funciones_8h.html#373014cd670b242dc813db42de6c0fca" title="Función que cambia el contraste de la imagen en función del parámetro gamma.">mejorarContraste</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fich_E, <span class="keyword">const</span> <span class="keywordtype">char</span>* fich_S, <span class="keywordtype">float</span> gamma) {
+<a name="l00051"></a>00051         <a class="code" href="classImagen.html" title="Clase que almacena la información de una imagen y se encarga de su gestión.">Imagen</a> imagen;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053         imagen.<a class="code" href="classImagen.html#1fcb000bb29513d2fb4b77e3785827f8" title="Carga la imagen de un fichero PGM.">cargarPGM</a>(fich_E);
+<a name="l00054"></a>00054         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; imagen.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>(); i++)
+<a name="l00055"></a>00055                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; imagen.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>(); j++)
+<a name="l00056"></a>00056                         imagen.<a class="code" href="classImagen.html#566a2ba8ed9fbc3d79b77e162e9cc740" title="Asignar el valor valor al píxel (fil, col) de la imagen.">asigna_pixel</a>(i, j, 255.0*pow(imagen.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j)/255.0, gamma));
+<a name="l00057"></a>00057         imagen.<a class="code" href="classImagen.html#a3a61f0842e0dc3d0309c42d229478b7" title="Almacena la imagen en un fichero PGM.">guardarPGM</a>(fich_S);
+<a name="l00058"></a>00058 }
+<a name="l00059"></a>00059 
+<a name="l00072"></a><a class="code" href="funciones_8cpp.html#e2d666648802f8708d1f598b5e03f4fa">00072</a> <span class="keywordtype">void</span> <a class="code" href="funciones_8h.html#e2d666648802f8708d1f598b5e03f4fa" title="Función que realiza un ecualizado automático de la imagen.">ecualizar</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fich_E, <span class="keyword">const</span> <span class="keywordtype">char</span>* fich_S) {
+<a name="l00073"></a>00073         <a class="code" href="classImagen.html" title="Clase que almacena la información de una imagen y se encarga de su gestión.">Imagen</a> imagen, im;
+<a name="l00074"></a>00074         <span class="keywordtype">int</span> histograma[256];
+<a name="l00075"></a>00075         <span class="keywordtype">double</span> probabilidades[256];
+<a name="l00076"></a>00076         <span class="keywordtype">double</span> transformacion[256];
+<a name="l00077"></a>00077         <span class="keywordtype">double</span> suma;
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 256; i++)
+<a name="l00080"></a>00080                 histograma[i] = 0;
+<a name="l00081"></a>00081         imagen.<a class="code" href="classImagen.html#1fcb000bb29513d2fb4b77e3785827f8" title="Carga la imagen de un fichero PGM.">cargarPGM</a>(fich_E);
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; imagen.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>(); i++)
+<a name="l00084"></a>00084                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; imagen.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>(); j++)
+<a name="l00085"></a>00085                         histograma[imagen.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j)]++;
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 256; i++)
+<a name="l00088"></a>00088                 probabilidades[i] = 1.0*histograma[i]/(imagen.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>()*imagen.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>());
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 256; i++) {
+<a name="l00091"></a>00091                 suma = 0;
+<a name="l00092"></a>00092                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt;= i; j++)
+<a name="l00093"></a>00093                         suma += probabilidades[j];
+<a name="l00094"></a>00094                 transformacion[i] = 255.0*suma;
+<a name="l00095"></a>00095         }
+<a name="l00096"></a>00096         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; imagen.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>(); i++)
+<a name="l00097"></a>00097                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; imagen.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>(); j++)
+<a name="l00098"></a>00098                         imagen.<a class="code" href="classImagen.html#566a2ba8ed9fbc3d79b77e162e9cc740" title="Asignar el valor valor al píxel (fil, col) de la imagen.">asigna_pixel</a>(i, j, transformacion[imagen.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j)]);
+<a name="l00099"></a>00099         imagen.<a class="code" href="classImagen.html#a3a61f0842e0dc3d0309c42d229478b7" title="Almacena la imagen en un fichero PGM.">guardarPGM</a>(fich_S);
+<a name="l00100"></a>00100 }
+<a name="l00101"></a>00101 
+<a name="l00112"></a><a class="code" href="funciones_8cpp.html#f090b754dbaaa908d9e57cf9919344e1">00112</a> <span class="keywordtype">int</span> <a class="code" href="funciones_8cpp.html#f090b754dbaaa908d9e57cf9919344e1" title="Función que calcula el umbral T de una imagen.">calcularUmbral</a>(<span class="keyword">const</span> <a class="code" href="classImagen.html" title="Clase que almacena la información de una imagen y se encarga de su gestión.">Imagen</a> &amp;imagen, <span class="keywordtype">int</span> T) {
+<a name="l00113"></a>00113         <span class="keywordtype">int</span> P1 = 0, P2 = 0, V1 = 0, V2 = 0, media;
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; imagen.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>(); i++) {
+<a name="l00116"></a>00116                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; imagen.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>(); j++) {
+<a name="l00117"></a>00117                         <span class="keywordflow">if</span>(T &lt;= imagen.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j)) {
+<a name="l00118"></a>00118                                 V1 += imagen.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j);
+<a name="l00119"></a>00119                                 P1++;
+<a name="l00120"></a>00120                         } <span class="keywordflow">else</span> {
+<a name="l00121"></a>00121                                 V2 += imagen.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j);
+<a name="l00122"></a>00122                                 P2++;
+<a name="l00123"></a>00123                         }
+<a name="l00124"></a>00124                 }
+<a name="l00125"></a>00125         }
+<a name="l00126"></a>00126         media = (V1/P1 + V2/P2)/2;
+<a name="l00127"></a>00127         <span class="keywordflow">if</span>(media == T)
+<a name="l00128"></a>00128                 <span class="keywordflow">return</span> media;
+<a name="l00129"></a>00129         <span class="keywordflow">else</span>
+<a name="l00130"></a>00130                 <span class="keywordflow">return</span> <a class="code" href="funciones_8cpp.html#f090b754dbaaa908d9e57cf9919344e1" title="Función que calcula el umbral T de una imagen.">calcularUmbral</a>(imagen, media);
+<a name="l00131"></a>00131 }
+<a name="l00132"></a>00132 
+<a name="l00143"></a><a class="code" href="funciones_8cpp.html#0b20436889389e16c9d0d2663149751e">00143</a> <span class="keywordtype">void</span> <a class="code" href="funciones_8h.html#0b20436889389e16c9d0d2663149751e" title="Función que realiza un umbralizado automático de la imagen.">umbralizar</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fich_E, <span class="keyword">const</span> <span class="keywordtype">char</span>* fich_S, <span class="keywordtype">int</span> &amp;T) {
+<a name="l00144"></a>00144         <a class="code" href="classImagen.html" title="Clase que almacena la información de una imagen y se encarga de su gestión.">Imagen</a> imagen;
+<a name="l00145"></a>00145         imagen.<a class="code" href="classImagen.html#1fcb000bb29513d2fb4b77e3785827f8" title="Carga la imagen de un fichero PGM.">cargarPGM</a>(fich_E);
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147         T = 0;
+<a name="l00148"></a>00148         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; imagen.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>(); i++)
+<a name="l00149"></a>00149                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; imagen.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>(); j++)
+<a name="l00150"></a>00150                         T += imagen.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j);
+<a name="l00151"></a>00151         T = T/(imagen.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>()*imagen.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>());
+<a name="l00152"></a>00152         T = <a class="code" href="funciones_8cpp.html#f090b754dbaaa908d9e57cf9919344e1" title="Función que calcula el umbral T de una imagen.">calcularUmbral</a>(imagen, T); <span class="comment">//Iniciamos la búsqueda recursiva con la media de valor umbral inicial</span>
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; imagen.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>(); i++)
+<a name="l00155"></a>00155                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; imagen.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>(); j++)
+<a name="l00156"></a>00156                         <span class="keywordflow">if</span>(imagen.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j) &gt;= T)
+<a name="l00157"></a>00157                                 imagen.<a class="code" href="classImagen.html#566a2ba8ed9fbc3d79b77e162e9cc740" title="Asignar el valor valor al píxel (fil, col) de la imagen.">asigna_pixel</a>(i, j, 255);
+<a name="l00158"></a>00158                         <span class="keywordflow">else</span>
+<a name="l00159"></a>00159                                 imagen.<a class="code" href="classImagen.html#566a2ba8ed9fbc3d79b77e162e9cc740" title="Asignar el valor valor al píxel (fil, col) de la imagen.">asigna_pixel</a>(i, j, 0);
+<a name="l00160"></a>00160         imagen.<a class="code" href="classImagen.html#a3a61f0842e0dc3d0309c42d229478b7" title="Almacena la imagen en un fichero PGM.">guardarPGM</a>(fich_S);
+<a name="l00161"></a>00161 }
+<a name="l00162"></a>00162 
+<a name="l00173"></a><a class="code" href="funciones_8cpp.html#e20f9a11809d0788cf4553ce131197ad">00173</a> <span class="keywordtype">void</span> <a class="code" href="funciones_8h.html#e20f9a11809d0788cf4553ce131197ad" title="Función que reduce el tamaño de una imagen en un factor &amp;quot;factor&amp;quot;.">crearIcono</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fich_E, <span class="keyword">const</span> <span class="keywordtype">char</span>* fich_S, <span class="keywordtype">int</span> factor) {
+<a name="l00174"></a>00174         <a class="code" href="classImagen.html" title="Clase que almacena la información de una imagen y se encarga de su gestión.">Imagen</a> imagen_E, imagen_S;
+<a name="l00175"></a>00175         <span class="keywordtype">int</span> n;
+<a name="l00176"></a>00176         <span class="keywordtype">double</span> media;
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178         imagen_E.<a class="code" href="classImagen.html#1fcb000bb29513d2fb4b77e3785827f8" title="Carga la imagen de un fichero PGM.">cargarPGM</a>(fich_E);
+<a name="l00179"></a>00179         imagen_S.<a class="code" href="classImagen.html#726f1bfb93e599bd4ae7d71f7cd1705a" title="Liberar los recursos ocupados por la imagen y crear una imagen en memoria con fils...">Reserva</a>(ceil(imagen_E.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>()/factor), ceil(imagen_E.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>()/factor));
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; imagen_E.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>(); i += factor) {
+<a name="l00182"></a>00182                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; imagen_E.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>(); j += factor) {
+<a name="l00183"></a>00183                         media = 0;
+<a name="l00184"></a>00184                         n = 0;
+<a name="l00185"></a>00185                         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = 0; k &lt; factor &amp;&amp; i+k &lt; imagen_E.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>(); k++)
+<a name="l00186"></a>00186                                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> s = 0; s &lt; factor &amp;&amp; j+s &lt; imagen_E.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>(); s++) {
+<a name="l00187"></a>00187                                         media += imagen_E.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i+k,j+s);
+<a name="l00188"></a>00188                                         n++;
+<a name="l00189"></a>00189                                 }
+<a name="l00190"></a>00190                         media = ceil(1.0*media/n);
+<a name="l00191"></a>00191                         imagen_S.<a class="code" href="classImagen.html#566a2ba8ed9fbc3d79b77e162e9cc740" title="Asignar el valor valor al píxel (fil, col) de la imagen.">asigna_pixel</a>(i/factor, j/factor, media);
+<a name="l00192"></a>00192                 }
+<a name="l00193"></a>00193         }
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195         imagen_S.<a class="code" href="classImagen.html#a3a61f0842e0dc3d0309c42d229478b7" title="Almacena la imagen en un fichero PGM.">guardarPGM</a>(fich_S);
+<a name="l00196"></a>00196 }
+<a name="l00197"></a>00197 
+<a name="l00209"></a><a class="code" href="funciones_8cpp.html#306ced60827238400994da518b81f031">00209</a> <span class="keywordtype">void</span> <a class="code" href="funciones_8h.html#306ced60827238400994da518b81f031" title="Función que genera una lista de imagenes interpoladas entre dos de referencia.">morphing</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fich_E, <span class="keyword">const</span> <span class="keywordtype">char</span>* fich_S, <span class="keyword">const</span> <span class="keywordtype">char</span>* prefijo) {
+<a name="l00210"></a>00210         <span class="keywordtype">int</span> num_iter = 0;
+<a name="l00211"></a>00211         <span class="keywordtype">bool</span> continuar = <span class="keyword">true</span>;
+<a name="l00212"></a>00212         <a class="code" href="classImagen.html" title="Clase que almacena la información de una imagen y se encarga de su gestión.">Imagen</a> imagen_A, imagen_B;
+<a name="l00213"></a>00213         <span class="keywordtype">char</span> nombre[100];
+<a name="l00214"></a>00214 
+<a name="l00215"></a>00215         imagen_A.<a class="code" href="classImagen.html#1fcb000bb29513d2fb4b77e3785827f8" title="Carga la imagen de un fichero PGM.">cargarPGM</a>(fich_E);
+<a name="l00216"></a>00216         imagen_B.<a class="code" href="classImagen.html#1fcb000bb29513d2fb4b77e3785827f8" title="Carga la imagen de un fichero PGM.">cargarPGM</a>(fich_S);
+<a name="l00217"></a>00217         assert(imagen_A.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>() == imagen_B.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>() &amp;&amp; imagen_A.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>() == imagen_B.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>());
+<a name="l00218"></a>00218 
+<a name="l00219"></a>00219         <span class="keywordflow">while</span>(continuar) {
+<a name="l00220"></a>00220                 continuar = <span class="keyword">false</span>;
+<a name="l00221"></a>00221                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; imagen_A.<a class="code" href="classImagen.html#56e4e6b003149ea2bc9dfecf09b22d5a" title="Calcular el número de filas de la imagen.">num_filas</a>(); i++) {
+<a name="l00222"></a>00222                         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; imagen_A.<a class="code" href="classImagen.html#29f1a1d6a8b9afb41036d76e9d64d4eb" title="Calcular el número de columnas de la imagen.">num_columnas</a>(); j++) {
+<a name="l00223"></a>00223                                 <span class="keywordflow">if</span>(imagen_A.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j) &lt; imagen_B.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j)) {
+<a name="l00224"></a>00224                                         imagen_A.<a class="code" href="classImagen.html#566a2ba8ed9fbc3d79b77e162e9cc740" title="Asignar el valor valor al píxel (fil, col) de la imagen.">asigna_pixel</a>(i, j, 1+imagen_A.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j));
+<a name="l00225"></a>00225                                         continuar = <span class="keyword">true</span>;
+<a name="l00226"></a>00226                                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(imagen_A.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j) &gt; imagen_B.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j)) {
+<a name="l00227"></a>00227                                         imagen_A.<a class="code" href="classImagen.html#566a2ba8ed9fbc3d79b77e162e9cc740" title="Asignar el valor valor al píxel (fil, col) de la imagen.">asigna_pixel</a>(i, j, imagen_A.<a class="code" href="classImagen.html#415bc0106229748b010bfc4f90b4f52c" title="Consultar el valor de la casilla (fil, col) de la imagen.">valor_pixel</a>(i,j)-1);
+<a name="l00228"></a>00228                                         continuar = <span class="keyword">true</span>;
+<a name="l00229"></a>00229                                 }
+<a name="l00230"></a>00230                         }
+<a name="l00231"></a>00231                 }
+<a name="l00232"></a>00232                 <span class="keywordflow">if</span>(continuar) {
+<a name="l00233"></a>00233                         sprintf(nombre, <span class="stringliteral">"%s_%i.PGM"</span>, prefijo, num_iter);
+<a name="l00234"></a>00234                         imagen_A.<a class="code" href="classImagen.html#a3a61f0842e0dc3d0309c42d229478b7" title="Almacena la imagen en un fichero PGM.">guardarPGM</a>(nombre);
+<a name="l00235"></a>00235                 }
+<a name="l00236"></a>00236                 num_iter++;
+<a name="l00237"></a>00237         }
+<a name="l00238"></a>00238 
+<a name="l00239"></a>00239 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Tue Jun 23 17:11:18 2009 para ClaseImagenyFunciones por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.6 </small></address>
+</body>
+</html>
